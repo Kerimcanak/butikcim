@@ -1,9 +1,11 @@
-
+import Header from "../layout/Header"
+import PageContent from "../layout/PageContent"
 const HomePage = () => {
   return (
-    <div className="h-screen w-screen bg-black">
-    why this does not load?
-    </div>
+    <>
+    <Header/>
+    <PageContent/>
+    </>
   )
 }
 
