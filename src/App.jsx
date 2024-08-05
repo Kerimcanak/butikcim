@@ -4,10 +4,9 @@ import HomePage from './pages/HomePage';
 function App() {
   return (
     <Router>
-      <Route path="/" element={<HomePage />} />
+      <Route exact path="/" component={HomePage} />
     </Router>
   );
 }
 
 export default App;
-
