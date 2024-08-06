@@ -21,12 +21,13 @@ const Header = () => {
         </div>
       </div>
 
-    <nav className="flex flex-col items-center space-y-4">
-        <a href="#" className="text-black">Home</a>
-        <a href="#" className="text-black">Product</a>
-        <a href="#" className="text-black">Pricing</a>
-        <a href="#" className="text-black">Contact</a>
-    </nav>
+      <nav className="flex flex-col items-center md:flex-row md:justify-center md:space-x-4">
+    <a href="#" className="text-black">Home</a>
+    <a href="#" className="text-black">Product</a>
+    <a href="#" className="text-black">Pricing</a>
+    <a href="#" className="text-black">Contact</a>
+</nav>
+
 
       <div className="relative">
         <div className="absolute inset-0 bg-gray-900 bg-opacity-50" />
