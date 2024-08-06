@@ -25,13 +25,6 @@ const Header = () => {
     </nav>
 
 
-
-
-
-
-
-
-
       <div className="relative">
         <div className="absolute inset-0 bg-gray-900 bg-opacity-50" />
 
