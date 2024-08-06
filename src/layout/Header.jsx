@@ -37,7 +37,7 @@ const Header = () => {
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white">
                 <h1 className="text-2xl font-bold">Title</h1>
                 <p className="mt-2">Description text goes here.</p>
-                <button className="mt-4 px-4 py-2 bg-blue-500 rounded">Button</button>
+                <button className="mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-400 rounded">Button</button>
             </div>
         </div>
 
@@ -45,7 +45,7 @@ const Header = () => {
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white">
                 <h1 className="text-2xl font-bold">Title</h1>
                 <p className="mt-2">Description text goes here.</p>
-                <button className="mt-4 px-4 py-2 bg-blue-500 rounded">Button</button>
+                <button className="mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-400 rounded">Button</button>
             </div>
         </div>
         </Slider>

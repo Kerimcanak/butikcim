@@ -1,14 +1,18 @@
 const Footer = () => (
   <footer>
-    <div className="bg-blue-900 text-white w-full">
-  <div className="flex flex-col items-center py-10">
+  <div className="bg-blue-900 text-white w-full">
+  <div className="flex flex-col md:flex-row md:justify-between items-center py-10 md:px-4">
+  <div className="md:text-left text-center">
     <h1 className="text-3xl font-bold mb-2">Consulting Agency</h1>
     <p className="mb-5">For Your Business</p>
-    <button className="bg-blue-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-      Contact Us
-    </button>
   </div>
+  <button className="bg-blue-600 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded md:ml-auto">
+    Contact Us
+  </button>
+</div>
 
+
+<div className="flex flex-col md:flex-row justify-center">
   <div className="flex flex-col items-center px-5 py-3 border-t border-blue-800">
     <h2 className="text-xl font-semibold mb-3">Company Info</h2>
     <a href="#" className="mb-1 hover:text-blue-300">About Us</a>
@@ -45,6 +49,7 @@ const Footer = () => (
       <i className="fas fa-map-marker-alt mr-2"></i>
       <span>4517 Washington Ave.</span>
     </div>
+  </div>
   </div>
 
   <div className="flex flex-col items-center px-5 py-3 border-t border-blue-800">
