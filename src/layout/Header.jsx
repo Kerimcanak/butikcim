@@ -1,32 +1,34 @@
 import Slider from "@ant-design/react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 
 const Header = () => {
 
         
   return (
     <header className="bg-white shadow-lg">
-      <div className="flex justify-between px-4 py-2">
-        <div className="flex items-center">
-          <i className="fas fa-shopping-bag text-black mr-2" />
-          <h1 className="text-black text-xl font-bold">
-            Butikcim
-          </h1>
-        </div>
-        <div className="flex items-center">
-          <i className="fas fa-search text-black mr-2" />
-          <i className="fas fa-shopping-cart text-black mr-2" />
-          <i className="fas fa-bars text-black" />
-        </div>
-      </div>
+<div className="flex md:flex-row justify-between px-4 py-2">
+  <div className="flex items-center">
+    <i className="fas fa-shopping-bag text-black mr-2" />
+    <h1 className="text-black text-xl font-bold">Butikcim</h1>
+  </div>
+  <nav className="flex flex-col items-center md:flex-row md:justify-center md:space-x-4">
+    <a href="#" className="text-black mb-2 md:mb-0">Home</a>
+    <a href="#" className="text-black mb-2 md:mb-0">Product</a>
+    <a href="#" className="text-black mb-2 md:mb-0">Pricing</a>
+    <a href="#" className="text-black mb-2 md:mb-0">Contact</a>
+  </nav>
+  <div id="right-icons" className="flex items-center md:mt-0">
+    <i className="fas fa-search text-black mr-2" />
+    <i className="fas fa-shopping-cart text-black mr-2" />
+    <i className="fas fa-bars text-black" />
+  </div>
+</div>
 
-      <nav className="flex flex-col items-center md:flex-row md:justify-center md:space-x-4">
-    <a href="#" className="text-black">Home</a>
-    <a href="#" className="text-black">Product</a>
-    <a href="#" className="text-black">Pricing</a>
-    <a href="#" className="text-black">Contact</a>
-</nav>
+
+
+
+
+
 
 
       <div className="relative">
