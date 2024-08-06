@@ -1,4 +1,5 @@
 import Slider from "@ant-design/react-slick";
+import { Link } from "react-router-dom";
 
 
 const Header = () => {
@@ -18,10 +19,10 @@ const Header = () => {
   </div>
 </div>
     <nav className="flex flex-col pb-4 items-center md:flex-row md:justify-center md:space-x-4">
-      <a href="#" className="text-black mb-2 md:mb-0">Home</a>
-      <a href="#" className="text-black mb-2 md:mb-0">Product</a>
-      <a href="#" className="text-black mb-2 md:mb-0">Pricing</a>
-      <a href="#" className="text-black mb-2 md:mb-0">Contact</a>
+      <Link to="/" className="text-black mb-2 md:mb-0">Home</Link>
+      <Link to="/" className="text-black mb-2 md:mb-0">Product</Link>
+      <Link to="/" className="text-black mb-2 md:mb-0">Pricing</Link>
+      <Link to="/" className="text-black mb-2 md:mb-0">Contact</Link>
     </nav>
 
 
@@ -33,15 +34,15 @@ const Header = () => {
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white">
                 <h1 className="text-2xl font-bold">Title</h1>
                 <p className="mt-2">Description text goes here.</p>
-                <button className="mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-400 rounded">Button</button>
-            </div>
+                <Link to="/" className="mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-400 rounded">Button</Link>            
+                </div>
         </div>
 
         <div className="relative bg-[url('https://picsum.photos/seed/picsum/200/300')] bg-cover h-72">
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white">
                 <h1 className="text-2xl font-bold">Title</h1>
                 <p className="mt-2">Description text goes here.</p>
-                <button className="mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-400 rounded">Button</button>
+                <Link to="/" className="mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-400 rounded">Button</Link>
             </div>
         </div>
         </Slider>
