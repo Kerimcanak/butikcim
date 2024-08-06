@@ -9,7 +9,7 @@ const Header = () => {
     <header className="bg-white shadow-lg">
       <div className="flex justify-between px-4 py-2">
         <div className="flex items-center">
-          <i className="fas fa-bars text-black mr-2" />
+          <i className="fas fa-pagelines text-black mr-2" />
           <h1 className="text-black text-xl font-bold">
             Logo
           </h1>

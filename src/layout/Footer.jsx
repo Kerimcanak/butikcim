@@ -46,6 +46,11 @@ const Footer = () => (
       <span>4517 Washington Ave.</span>
     </div>
   </div>
+
+  <div className="flex flex-col items-center px-5 py-3 border-t border-blue-800">
+    <h2 className="text-xl font-semibold mb-3">Butikcim <i className="fas fa-copyright"></i></h2>
+  </div>
+
 </div>
 
   </footer>
