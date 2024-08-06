@@ -9,14 +9,29 @@ const Footer = () => (
     </button>
   </div>
 
-  <div className="flex flex-col items-start px-5 py-3 border-t border-blue-800">
+  <div className="flex flex-col items-center px-5 py-3 border-t border-blue-800">
     <h2 className="text-xl font-semibold mb-3">Company Info</h2>
     <a href="#" className="mb-1 hover:text-blue-300">About Us</a>
     <a href="#" className="mb-1 hover:text-blue-300">Career</a>
     <a href="#" className="mb-1 hover:text-blue-300">Blog</a>
   </div>
 
-  <div className="flex flex-col items-start px-5 py-3 border-t border-blue-800">
+  <div className="flex flex-col items-center px-5 py-3 border-t border-blue-800">
+    <h2 className="text-xl font-semibold mb-3">Legal</h2>
+    <a href="#" className="mb-1 hover:text-blue-300">About Us</a>
+    <a href="#" className="mb-1 hover:text-blue-300">Career</a>
+    <a href="#" className="mb-1 hover:text-blue-300">Blog</a>
+  </div>
+
+  <div className="flex flex-col items-center px-5 py-3 border-t border-blue-800">
+    <h2 className="text-xl font-semibold mb-3">Features</h2>
+    <a href="#" className="mb-1 hover:text-blue-300">Business Marketing</a>
+    <a href="#" className="mb-1 hover:text-blue-300">User Analytic</a>
+    <a href="#" className="mb-1 hover:text-blue-300">Live Chat</a>
+    <a href="#" className="mb-1 hover:text-blue-300">Unlimited Support</a>
+  </div>
+
+  <div className="flex flex-col items-center px-5 py-3 border-t border-blue-800">
     <h2 className="text-xl font-semibold mb-3">Get in Touch</h2>
     <div className="flex items-center mb-2">
       <i className="fas fa-phone mr-2"></i>
