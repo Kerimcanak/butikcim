@@ -11,18 +11,19 @@ const Header = () => {
     <i className="fas fa-shopping-bag text-black mr-2" />
     <h1 className="text-black text-xl font-bold">Butikcim</h1>
   </div>
-  <nav className="flex flex-col items-center md:flex-row md:justify-center md:space-x-4">
-    <a href="#" className="text-black mb-2 md:mb-0">Home</a>
-    <a href="#" className="text-black mb-2 md:mb-0">Product</a>
-    <a href="#" className="text-black mb-2 md:mb-0">Pricing</a>
-    <a href="#" className="text-black mb-2 md:mb-0">Contact</a>
-  </nav>
   <div id="right-icons" className="flex items-center md:mt-0">
     <i className="fas fa-search text-black mr-2" />
     <i className="fas fa-shopping-cart text-black mr-2" />
     <i className="fas fa-bars text-black" />
   </div>
 </div>
+    <nav className="flex flex-col pb-4 items-center md:flex-row md:justify-center md:space-x-4">
+      <a href="#" className="text-black mb-2 md:mb-0">Home</a>
+      <a href="#" className="text-black mb-2 md:mb-0">Product</a>
+      <a href="#" className="text-black mb-2 md:mb-0">Pricing</a>
+      <a href="#" className="text-black mb-2 md:mb-0">Contact</a>
+    </nav>
+
 
 
 
