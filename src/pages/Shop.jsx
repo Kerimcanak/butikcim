@@ -8,6 +8,7 @@ function Shop() {
   return (
     <>
       <div className="bg-emerald-700 w-full h-16 invisible md:visible">
+      
       </div>
       <Header/>
       <div className="mx-6 md:mx-12 lg:mx-20">
