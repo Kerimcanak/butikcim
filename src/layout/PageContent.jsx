@@ -5,9 +5,11 @@ const productPics = Array.from({ length: 9 }, () => 'https://picsum.photos/200/3
 
 const PageContent = () => (
     <div className="container mx-auto py-8">
-        <div className="flex justify-center items-center">
-            <h1 className="text-4xl font-bold text-center">Vitrin</h1>
-        </div>
+            <div className="flex flex-col items-center justify-center h-56 text-center">
+      <h2 className="text-2xl font-bold">Featured Products</h2>
+      <h3 className="text-xl font-semibold">BESTSELLER PRODUCTS</h3>
+      <p className="text-base">Problems trying to resolve the conflict between</p>
+    </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {productWords.map((word, index) => (
                 <ProductCard key={index} imgSrc={productPics[index]} title={word} description="Description of the product" />
