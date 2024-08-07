@@ -1,4 +1,3 @@
-import Slider from "@ant-design/react-slick";
 import { Link } from "react-router-dom";
 
 

@@ -15,11 +15,11 @@ function Shop() {
       {[1, 2, 3, 4].map((num) => (
     <div
       key={num}
-      className="w-1/4 h-64 bg-cover bg-center"
-      style={{ backgroundImage: `url(https://picsum.photos/200?random=${num})` }}
+      className="w-1/4 h-64 bg-[url('https://picsum.photos/200?random=${num}')] bg-cover bg-center"
     ></div>
   ))}
 </div>
+
 
       <div className="flex p-4 bg-zinc-50 flex-col items-start justify-center sm:space-y-2 md:items-center md:flex-row md:justify-between">
         <span className="text-gray-700">Showing 1-20 results</span>
