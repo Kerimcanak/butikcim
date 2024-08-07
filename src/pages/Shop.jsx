@@ -1,9 +1,8 @@
 import Header from "../layout/Header"
-import { ProductCard } from "../components/ProductCard";
 import Footer from "../layout/Footer";
+import ShopContent from "../layout/ShopContent";
 
-const productWords = Array.from({ length: 9 }, () => Math.random().toString(36).substring(7));
-const productPics = Array.from({ length: 9 }, () => 'https://picsum.photos/200/300?random=' + Math.floor(Math.random() * 1000));
+
 
 function Shop() {
   return (
@@ -12,7 +11,7 @@ function Shop() {
 
       </div>
       <Header/>
-
+      <ShopContent/>
 
         <Footer/>
 
