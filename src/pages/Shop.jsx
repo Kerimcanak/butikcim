@@ -1,6 +1,10 @@
 import Header from "../layout/Header"
+import ProductCards from "../components/ProductCards"
 
-function EmptyComponent() {
+const productWords = Array.from({ length: 9 }, () => Math.random().toString(36).substring(7));
+const productPics = Array.from({ length: 9 }, () => 'https://picsum.photos/200/300?random=' + Math.floor(Math.random() * 1000));
+
+function Shop() {
   return (
     <div>
       <div className="bg-emerald-700 w-full h-16">
@@ -30,9 +34,16 @@ function EmptyComponent() {
       </div>
       <button className="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600">Filter</button>
     </div>
+        <div className="bg-zinc-50">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                {productWords.map((word, index) => (
+                    <ProductCards key={index} imgSrc={productPics[index]} title={word} description="Description of the product" />
+                ))}
+            </div>
+        </div>
 
     </div>
   )
 }
 
-export default EmptyComponent
+export default Shop
