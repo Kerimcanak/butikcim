@@ -7,7 +7,7 @@ const productPics = Array.from({ length: 9 }, () => 'https://picsum.photos/200/3
 function Shop() {
   return (
     <div>
-      <div className="bg-emerald-700 w-full h-16">
+      <div className="bg-emerald-700 w-full h-16 invisible md:visible">
       </div>
       <Header/>
       <div className="bg-zinc-50 flex flex-col justify-around items-center p-4 gap-4 md:flex-row">  
