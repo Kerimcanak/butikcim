@@ -28,11 +28,11 @@ const productPics = Array.from({ length: 9 }, () => 'https://picsum.photos/200/3
           <button className="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600 sm:mb-2">Filter</button>
         </div>
         <div className="bg-zinc-50">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {productWords.map((word, index) => (
-              <ProductCard key={index} imgSrc={productPics[index]} title={word} description="Description of the product" />
-            ))}
-          </div>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                {productPrices.map((price, index) => (
+        <ProductCard key={index} imgSrc={productPics[index]} title={productWords[index]} description={productWords[index]} price={price} />
+        ))}
+        </div>
         </div>
       </div>
     );
