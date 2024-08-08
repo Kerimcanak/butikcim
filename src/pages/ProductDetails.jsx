@@ -1,3 +1,8 @@
 export default function ProductDetails() {
-    return <></>;
+    return ( <>
+    
+    <HeroPromotion/>
+    <Header/>
+    
+    </>);
 }

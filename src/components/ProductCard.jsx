@@ -1,13 +1,14 @@
 import { Link, useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const ProductCard = ({ imgSrc, title, description }) => {
+const ProductCard = ({ imgSrc, title, description, price }) => {
+
   const history = useHistory();
 
   const handleReadMore = () => {
     history.push({
       pathname: '/product-detail',
-      state: { title, description, imgSrc }
+      state: { title, description, imgSrc, price }
     });
   };
 
@@ -21,6 +22,7 @@ const ProductCard = ({ imgSrc, title, description }) => {
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
         </Link>
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{description}</p>
+        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Price: ${price}</p>
         <button
           className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           onClick={handleReadMore}
@@ -39,6 +41,7 @@ ProductCard.propTypes = {
   imgSrc: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
 };
 
 export { ProductCard };
