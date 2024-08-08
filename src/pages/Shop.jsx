@@ -1,6 +1,7 @@
 import Header from "../layout/Header"
 import Footer from "../layout/Footer";
 import ShopContent from "../layout/ShopContent";
+import LogoList from "../components/LogoList";
 
 
 
@@ -12,8 +13,8 @@ function Shop() {
       </div>
       <Header/>
       <ShopContent/>
-
-        <Footer/>
+      <LogoList/>
+      <Footer/>
 
     </>
   )
