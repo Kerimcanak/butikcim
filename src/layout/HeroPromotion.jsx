@@ -1,5 +1,5 @@
 const HeroPromotion = () => (
-  <nav className="invisible md:bg-emerald-700 md:p-4 md:flex md:items-center md:justify-between md:visible">
+  <nav className="invisible p-0 flex-none h-0 md:bg-emerald-700 md:h-16 md:p-4 md:flex md:items-center md:justify-between md:visible">
     <div className="text-white mr-4">
       <i className="fas fa-phone-square-alt mr-2"></i>
       (012) 345-6789
