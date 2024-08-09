@@ -37,10 +37,10 @@ const PageContent = () => (
             </div>
         </div>
         </Slider>
-        <LogoList />
 
       </div>
             <div className="flex flex-col items-center justify-center h-56 text-center">
+            <LogoList />
       <h2 className="text-2xl font-bold">Featured Products</h2>
       <h3 className="text-xl font-semibold">BESTSELLER PRODUCTS</h3>
       <p className="text-base">Problems trying to resolve the conflict between</p>
