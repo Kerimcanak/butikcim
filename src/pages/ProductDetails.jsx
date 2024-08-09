@@ -55,6 +55,7 @@ export default function ProductDetails(props) {
                 <li class="mb-2"><span class="mr-2">></span>The quick fox jumps over the dog</li>
                 </ol>
             </div>
+            
 
 
 
