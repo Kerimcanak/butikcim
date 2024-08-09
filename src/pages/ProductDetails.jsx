@@ -30,6 +30,36 @@ export default function ProductDetails(props) {
             Select Options
           </button>
         </div>
+
+        <div class="flex flex-col">
+            <div class="flex justify-center space-x-4 mb-4">
+                <div class="px-4 py-2 bg-gray-200 rounded-md cursor-pointer">Description</div>
+                <div class="px-4 py-2 bg-gray-200 rounded-md cursor-pointer">Additional Information</div>
+                <div class="px-4 py-2 bg-gray-200 rounded-md cursor-pointer">Reviews</div>
+            </div>
+            
+            <div class="flex flex-col items-center">
+            <img src={`https://picsum.photos/id/${Math.floor(Math.random() * 1000)}/400/300`} class="rounded-lg shadow-lg mb-4" alt="Random image" />                
+            <h2 class="text-2xl font-bold mb-4">The quick fox jumps over</h2>
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut risus in augue luctus venenatis. Sed tincidunt, risus in efficitur rutrum, neque urna eleifend tortor, a ullamcorper enim nulla vel mi.</p>
+                <p class="mb-4">Cras commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                <p class="mb-4">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                <ul class="mb-4">
+                <h2 class="text-2xl font-bold mb-4">The quick fox jumps over</h2>
+                <li class="mb-2"><span class="mr-2">></span>The quick fox jumps over the dog</li>
+                <li class="mb-2"><span class="mr-2">></span>The quick fox jumps over the dog</li>
+                </ul>
+                <ol class="mb-4">
+                <h2 class="text-2xl font-bold mb-4">The quick fox jumps over</h2>
+                <li class="mb-2"><span class="mr-2">></span>The quick fox jumps over the dog</li>
+                <li class="mb-2"><span class="mr-2">></span>The quick fox jumps over the dog</li>
+                </ol>
+            </div>
+
+
+
+            </div>
+
       </>
     );
   }

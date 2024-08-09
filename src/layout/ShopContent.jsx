@@ -7,7 +7,7 @@ const productPrices = Array.from({ length: 9 }, () => Math.floor(Math.random() *
 
     return (
       <div className="mx-6 md:mx-12 lg:mx-20">
-        <div className="bg-zinc-50 flex flex-col justify-around items-center p-4 gap-4 md:flex-row">
+        <div className="pt-4 bg-zinc-50 flex flex-col justify-around items-center p-4 gap-4 md:flex-row md:pt-4">
           {[1, 2, 3, 4].map((num) => (
             <div
               key={num}
@@ -15,7 +15,9 @@ const productPrices = Array.from({ length: 9 }, () => Math.floor(Math.random() *
             ></div>
           ))}
         </div>
-  
+
+
+          <div>
         <div className="flex p-4 bg-zinc-50 flex-col items-start justify-center sm:space-y-2 md:items-center md:flex-row md:justify-between">
           <span className="text-gray-700">Showing 1-20 results</span>
           <div className="flex items-center space-x-2 sm:mb-2 sm:space-y-2 sm:flex-col">
@@ -36,6 +38,9 @@ const productPrices = Array.from({ length: 9 }, () => Math.floor(Math.random() *
         ))}
         </div>
         </div>
+        </div>
+
+        
       </div>
     );
   }
