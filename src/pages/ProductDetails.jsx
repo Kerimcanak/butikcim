@@ -44,7 +44,7 @@ export default function ProductDetails(props) {
 
 
 
-        <div class="flex flex-col">
+        <div class="flex flex-col md:pt-3">
             <div class="flex justify-center space-x-4 mb-4">
                 <div class="px-4 py-2 bg-gray-200 rounded-md cursor-pointer">Description</div>
                 <div class="px-4 py-2 bg-gray-200 rounded-md cursor-pointer">Additional Information</div>
@@ -73,14 +73,16 @@ export default function ProductDetails(props) {
                 </div>
             </div>
 
+            <div className='md:pl-12'>
             <div className="flex flex-col items-center justify-center h-56 text-center">
             <h2 className="text-2xl font-bold">BESTSELLER PRODUCTS</h2>
             </div>
             <div class="px-4 pl-8">
-            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
                 {productPrices.map((price, index) => (
                 <ProductCard key={index} imgSrc={productPics[index]} title={productWords[index]} description={productWords[index]} price={price} />
                 ))}
+            </div>
             </div>
             </div>
             <LogoList/>
