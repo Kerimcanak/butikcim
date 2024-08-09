@@ -64,13 +64,13 @@ export default function ProductDetails(props) {
                 <div id="lists">
                 <ul class="mb-4">
                 <h2 class="text-2xl font-bold mb-4">The quick fox jumps over</h2>
-                <li class="mb-2"><span class="mr-2">></span>The quick fox jumps over the dog</li>
-                <li class="mb-2"><span class="mr-2">></span>The quick fox jumps over the dog</li>
+                <li class="mb-2"><span class="mr-2">⟩</span>The quick fox jumps over the dog</li>
+                <li class="mb-2"><span class="mr-2">⟩</span>The quick fox jumps over the dog</li>
                 </ul>
                 <ol class="mb-4">
                 <h2 class="text-2xl font-bold mb-4">The quick fox jumps over</h2>
-                <li class="mb-2"><span class="mr-2">></span>The quick fox jumps over the dog</li>
-                <li class="mb-2"><span class="mr-2">></span>The quick fox jumps over the dog</li>
+                <li class="mb-2"><span class="mr-2">⟩</span>The quick fox jumps over the dog</li>
+                <li class="mb-2"><span class="mr-2">⟩</span>The quick fox jumps over the dog</li>
                 </ol>
                 </div>
             </div>
