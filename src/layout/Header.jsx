@@ -20,7 +20,7 @@ const Header = () => {
     <nav className="flex flex-col pb-4 items-center md:flex-row md:justify-center md:space-x-4">
       <Link to="/" className="text-black hover:text-gray-600 mb-2 md:mb-0">Home</Link>
       <Link to="/shop" className="text-black hover:text-gray-600 mb-2 md:mb-0">Shop</Link>
-      <Link to="/" className="text-black hover:text-gray-600 mb-2 md:mb-0">Pricing</Link>
+      <Link to="/contact" className="text-black hover:text-gray-600 mb-2 md:mb-0">Contact us</Link>
       <Link to="/" className="text-black hover:text-gray-600 mb-2 md:mb-0">Contact</Link>
     </nav>
 
