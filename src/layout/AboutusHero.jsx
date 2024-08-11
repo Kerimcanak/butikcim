@@ -4,9 +4,9 @@ import AboutusFigure1 from "/AboutusFigure1.png"
 
 export const AboutusHero = () => {
     return (
-        <div className="flex-col h-screen w-full md:flex-row">
+        <div className="flex-col h-[40rem] overflow-hidden md:flex-row ">
             <div className="w-full h-72 bg-white md:flex md:items-center md:h-3/4 ">
-                <div className="w-full pb-16 pt-16">
+                <div className="w-full">
                     <div id="first-section-text" className="flex flex-col justify-center text-center">
                         <div >
                             <h1 className="text-4xl font-bold text-gray-800 mb-8">About Us</h1>
@@ -17,7 +17,7 @@ export const AboutusHero = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-full"><img src={AboutusFigure1} className="mx-auto max-w-full md:max-w-[600px]"/></div>
+                <div className="w-full overflow-hidden"><img src={AboutusFigure1} className="mx-auto max-w-full md:max-w-[600px] object-cover"/></div>
             </div>
         </div>
     )
