@@ -80,7 +80,7 @@ function AboutsContent () {
         </div>
         <div id="first-member" className="bg-white w-full flex justify-center items-center p-4 gap-3">
             <div className="max-w-[1200px] w-full text-center">
-                <img src={AboutusTeam1} className="w-2/4 mt-8 pb-6 mx-auto "/>
+                <img src={AboutusTeam1} className="w-4/5 mt-8 pb-6 mx-auto "/>
                 <h1 className="text-4xl font-bold text-gray-800 mb-8">Username</h1>
                 <p className="text-gray-600 mb-8">
                 Profession               
@@ -100,7 +100,7 @@ function AboutsContent () {
         </div>
         <div id="second-member" className="bg-white w-full flex justify-center items-center p-4 gap-3">
             <div className="max-w-[1200px] w-full text-center">
-                <img src={AboutusTeam2} className="w-2/4 mt-8 pb-6 mx-auto "/>
+                <img src={AboutusTeam2} className="w-4/5 mt-8 pb-6 mx-auto "/>
                 <h1 className="text-4xl font-bold text-gray-800 mb-8">Username</h1>
                 <p className="text-gray-600 mb-8">
                 Profession               
@@ -120,7 +120,7 @@ function AboutsContent () {
         </div>
         <div id="third-member" className="bg-white w-full flex justify-center items-center p-4 gap-3">
             <div className="max-w-[1200px] w-full text-center">
-                <img src={AboutusTeam3} className="w-2/4 mt-8 pb-6 mx-auto "/>
+                <img src={AboutusTeam3} className="w-4/5 mt-8 pb-6 mx-auto "/>
                 <h1 className="text-4xl font-bold text-gray-800 mb-8">Username</h1>
                 <p className="text-gray-600 mb-8">
                 Profession               
