@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import AboutusFigure1 from "/AboutusFigure1.png"
 import AboutusTeam1 from "/AboutusTeam1.png"
 import AboutusTeam2 from "/AboutusTeam2.jpeg"
 import AboutusTeam3 from "/AboutusTeam3.jpeg"
@@ -13,22 +12,7 @@ function AboutsContent () {
     return (
         <>
 
-        <div className="flex h-screen w-full">
-            <div className="w-1/2 h-3/4 bg-white">
-            <div id="first-section-text" className="flex min-h-full flex-col justify-center text-center ">
-                    <div >
-                        <h1 className="text-4xl font-bold text-gray-800 mb-8">About Us</h1>
-                        <p className="text-gray-600 mb-8">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit fugiat quidem, quo quaerat quisquam, vero.
-                        </p>
-                        <Link className="bg-blue-500 text-white px-8 py-3 rounded-md hover:bg-blue-400">Learn More</Link>
-                    </div>
-                </div>
-            </div>
-            
-            <div className="w-1/2 h-3/4 bg-black"><img src={AboutusFigure1} className="mx-auto max-w-[600px]"/></div>
-            
-        </div>
+        
 
         <div id="second-section" className="bg-white w-full flex justify-center items-center p-4 gap-3">
             <div className="max-w-[1200px] w-full text-center flex-column md:flex-row">
