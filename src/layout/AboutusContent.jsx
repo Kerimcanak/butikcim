@@ -14,7 +14,7 @@ function AboutsContent () {
         <>
 
         <div className="flex h-screen w-full">
-            <div className="w-1/2 h-3/4 bg-yellow-500">
+            <div className="w-1/2 h-3/4 bg-white">
             <div id="first-section-text" className="flex min-h-full flex-col justify-center text-center ">
                     <div >
                         <h1 className="text-4xl font-bold text-gray-800 mb-8">About Us</h1>
