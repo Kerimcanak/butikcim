@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import AboutusFigure1 from "/AboutusFigure1.png"
 import AboutusTeam1 from "/AboutusTeam1.png"
 import AboutusTeam2 from "/AboutusTeam2.jpeg"
 import AboutusTeam3 from "/AboutusTeam3.jpeg"
@@ -12,39 +11,19 @@ function AboutsContent () {
 
     return (
         <>
-
-        <div className="flex h-screen w-full">
-            <div className="w-1/2 h-3/4 bg-white">
-            <div id="first-section-text" className="flex min-h-full flex-col justify-center text-center ">
-                    <div >
-                        <h1 className="text-4xl font-bold text-gray-800 mb-8">About Us</h1>
-                        <p className="text-gray-600 mb-8">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit fugiat quidem, quo quaerat quisquam, vero.
-                        </p>
-                        <Link className="bg-blue-500 text-white px-8 py-3 rounded-md hover:bg-blue-400">Learn More</Link>
-                    </div>
-                </div>
-            </div>
-            
-            <div className="w-1/2 h-3/4 bg-black"><img src={AboutusFigure1} className="mx-auto max-w-[600px]"/></div>
-            
+        <div class="w-full flex flex-col items-center justify-between md:flex-row">
+        <div class="bg-white w-1/2 h-auto p-4 m-4 text-center">
+            <span className="text-lg font-bold text-red-500 mb-8">Problems trying</span>
+            <h1 className="text-4xl font-bold text-gray-800 mb-8">Met minim Mollie non desert Alamo est sit cliquey dolor do met sent.</h1>
         </div>
-
-        <div id="second-section" className="bg-white w-full flex justify-center items-center p-4 gap-3">
-            <div className="max-w-[1200px] w-full text-center flex-column md:flex-row">
-                <div>
-                <span className="text-lg font-bold text-red-500 mb-8">Problems trying</span>
-                <h1 className="text-4xl font-bold text-gray-800 mb-8">Met minim Mollie non desert Alamo est sit cliquey dolor do met sent.</h1>
-                </div>
-                <div>
-                <p className="text-gray-600 mb-8">
-                Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics                 
-                </p>
-                </div>
-            </div>
+        <div class="bg-white w-1/2 h-auto p-4 m-4 text-center">
+            <p className="text-gray-600 mb-8">
+                Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics
+            </p>
+        </div>
         </div>
         <div id="third-section" className="bg-white w-full flex justify-center items-center">
-            <div className="max-w-[1200px] w-full flex flex-col items-center gap-24">
+            <div className="w-full flex flex-col justify-center items-center gap-24 md:flex-row">
                 <div className="flex flex-col items-center">
                     <span className="text-8xl font-bold text-gray-800">45k</span>
                     <span className="text-gray-600">Customers served</span>
@@ -88,7 +67,11 @@ function AboutsContent () {
                 </p>
             </div>
         </div>
-        <div id="first-member" className="bg-white w-full flex justify-center items-center p-4 gap-3">
+
+
+        <div id="team-members-table" class="flex flex-col md:flex-row md:justify-center md:items-center md:w-full">
+        <div id="first-member" class="bg-white p-4">        
+            <div  className="bg-white w-full flex justify-center items-center p-4 gap-3">
             <div className="max-w-[1200px] w-full text-center">
                 <img src={AboutusTeam1} className="w-4/5 mt-8 pb-6 mx-auto "/>
                 <h1 className="text-4xl font-bold text-gray-800 mb-8">Username</h1>
@@ -107,7 +90,8 @@ function AboutsContent () {
                     </Link>
                 </div>
             </div>
-        </div>
+        </div></div>
+        <div class="bg-white p-4">
         <div id="second-member" className="bg-white w-full flex justify-center items-center p-4 gap-3">
             <div className="max-w-[1200px] w-full text-center">
                 <img src={AboutusTeam2} className="w-4/5 mt-8 pb-6 mx-auto "/>
@@ -128,6 +112,8 @@ function AboutsContent () {
                 </div>
             </div>
         </div>
+        </div>
+        <div class="bg-white p-4">
         <div id="third-member" className="bg-white w-full flex justify-center items-center p-4 gap-3">
             <div className="max-w-[1200px] w-full text-center">
                 <img src={AboutusTeam3} className="w-4/5 mt-8 pb-6 mx-auto "/>
@@ -148,6 +134,9 @@ function AboutsContent () {
                 </div>
             </div>
         </div>
+        </div>
+        </div>
+
 
         </>
     )
