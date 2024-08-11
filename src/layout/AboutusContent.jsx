@@ -9,12 +9,13 @@ import AboutusTeam3 from "/AboutusTeam3.jpeg"
 //let us remember this is a component, a part of larger web app
 
 function AboutsContent () {
-    document.cookie = "LAST_RESULT_ENTRY_KEY=value; SameSite=None; Secure";
+
     return (
         <>
-        <div id="first-section" className="bg-white flex justify-center items-center">
-            <div className="flex-col w-full items-center justify-center sm:flex-row">
-                <div id="first-section-text" className="w-1/2 text-center">
+
+        <div className="flex h-screen w-full">
+            <div className="w-1/2 h-3/4 bg-yellow-500">
+            <div id="first-section-text" className="flex min-h-full flex-col justify-center text-center ">
                     <div >
                         <h1 className="text-4xl font-bold text-gray-800 mb-8">About Us</h1>
                         <p className="text-gray-600 mb-8">
@@ -23,10 +24,10 @@ function AboutsContent () {
                         <Link className="bg-blue-500 text-white px-8 py-3 rounded-md hover:bg-blue-400">Learn More</Link>
                     </div>
                 </div>
-                <div className="w-1/2">
-                    <img src={AboutusFigure1} className="mx-auto max-w-[600px]"/>
-                </div>
             </div>
+            
+            <div className="w-1/2 h-3/4 bg-black"><img src={AboutusFigure1} className="mx-auto max-w-[600px]"/></div>
+            
         </div>
 
         <div id="second-section" className="bg-white w-full flex justify-center items-center p-4 gap-3">
