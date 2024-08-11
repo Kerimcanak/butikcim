@@ -1,6 +1,8 @@
+import Header from "../layout/Header"
 import AboutusLogoList from "../components/AboutusLogoList"
 import AboutsContent from "../layout/AboutusContent"
-import Header from "../layout/Header"
+import AboutusWorkwitusCard from "../layout/AboutusWorkwitusCard"
+import Footer from "../layout/Footer"
 
 function Aboutus () {
     return (
@@ -8,6 +10,8 @@ function Aboutus () {
             <Header/>
             <AboutsContent/>
             <AboutusLogoList/>
+            <AboutusWorkwitusCard/>
+            <Footer/>
         </>
     )
 }
