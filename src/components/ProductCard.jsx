@@ -6,10 +6,11 @@ const ProductCard = ({ imgSrc, title, description, price }) => {
 const history = useHistory();
 
 const handleReadMore = () => {
-history.push({
-pathname: '/product-detail',
-state: { title, description, imgSrc, price }
-});
+  history.push({
+    pathname: '/product-detail',
+    state: { title, description, imgSrc, price }
+  });
+  window.scrollTo(0, 0);
 };
 
 return (
