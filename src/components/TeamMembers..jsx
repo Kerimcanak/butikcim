@@ -6,16 +6,16 @@ const TeamMembers = () => {
       <div id="first-member" className="bg-white p-4">
         <div className="bg-white w-full flex justify-center items-center p-4 gap-3">
           <div className="max-w-[1200px] w-full text-center">
-            <img
-              src={`https://picsum.photos/200/300?random=${Math.floor(
-                Math.random() * 1000
-              )}`}
-              className="w-4/5 mt-8 pb-6 mx-auto"
-            />
+            <div
+              className="relative h-72 w-4/5 mt-8 mb-8 mx-auto bg-center bg-cover bg-no-repeat"
+              style={{
+                backgroundImage: `url('https://media.licdn.com/dms/image/v2/D4D03AQHHikjSDQq9xw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1708951317641?e=1729123200&v=beta&t=g7NwSvz4g18KM60O7jvqeBC-iaIqKgZDAw0q6GdeJPI')`,
+              }}
+            ></div>
             <h1 className="text-4xl font-bold text-gray-800 mb-8">
-              Nicholas Wilson
+            Erhan FIRAT
             </h1>
-            <p className="text-gray-600 mb-8">Full stack developer</p>
+            <p className="text-gray-600 mb-8">Project Owner</p>
             <div className="flex justify-center mt-8">
               <Link
                 to="https://facebook.com"
@@ -45,16 +45,16 @@ const TeamMembers = () => {
       <div className="bg-white p-4">
         <div id="second-member" className="bg-white w-full flex justify-center items-center p-4 gap-3">
           <div className="max-w-[1200px] w-full text-center">
-            <img
-              src={`https://picsum.photos/200/300?random=${Math.floor(
-                Math.random() * 1000
-              )}`}
-              className="w-4/5 mt-8 pb-6 mx-auto"
-            />
+          <div
+              className="relative h-72 w-4/5 mt-8 mb-8 mx-auto bg-center bg-cover bg-no-repeat"
+              style={{
+                backgroundImage: `url('https://media.licdn.com/dms/image/v2/C4D03AQE8uHbxXDXfmw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1635783306921?e=1729123200&v=beta&t=UxuJSiy79muokf6otetC1hqeb0McaSrfa_TYEEb2Mz4')`,
+              }}
+            ></div>
             <h1 className="text-4xl font-bold text-gray-800 mb-8">
-              Emily Johnson
+            Gökhan Özdemir
             </h1>
-            <p className="text-gray-600 mb-8">Front end developer</p>
+            <p className="text-gray-600 mb-8">Scrum Master</p>
             <div className="flex justify-center mt-8">
               <Link
                 to="https://facebook.com"
@@ -84,16 +84,16 @@ const TeamMembers = () => {
       <div className="bg-white p-4">
         <div id="third-member" className="bg-white w-full flex justify-center items-center p-4 gap-3">
           <div className="max-w-[1200px] w-full text-center">
-            <img
-              src={`https://picsum.photos/200/300?random=${Math.floor(
-                Math.random() * 1000
-              )}`}
-              className="w-4/5 mt-8 pb-6 mx-auto"
-            />
+          <div
+              className="relative h-72 w-4/5 mt-8 mb-8 mx-auto bg-center bg-cover bg-no-repeat"
+              style={{
+                backgroundImage: `url('https://media.licdn.com/dms/image/v2/D4D03AQHe9g0EkxCVMw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712608426819?e=1729123200&v=beta&t=TbxSVcFOXCoOV7zdEh_EwN0fTIh0w8H8XBotgtrW_VY')`,
+              }}
+            ></div>
             <h1 className="text-4xl font-bold text-gray-800 mb-8">
-              Michael Brown
+            Kerimcan AK
             </h1>
-            <p className="text-gray-600 mb-8">Back end developer</p>
+            <p className="text-gray-600 mb-8">Front-end Developer</p>
             <div className="flex justify-center mt-8">
               <Link
                 to="https://facebook.com"

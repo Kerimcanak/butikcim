@@ -15,7 +15,7 @@ function TeamContent() {
     <>
       <div
         id="team-section"
-        className="bg-white w-full flex justify-center items-center p-4 gap-3 pb-24"
+        className="bg-white w-full flex justify-center items-center p-4 gap-3 pb-14"
       >
         <div className="max-w-[1200px] w-full text-center">
           <p className="text-2xl text-gray-600 mb-8 font-bold">WHAT WE DO</p>
@@ -27,19 +27,19 @@ function TeamContent() {
           </p>
         </div>
       </div>
-      <div id="hero" className="w-full flex flex-col md:flex-row gap-6">
-        <img src={TeamHero} className="w-1/2" />
-        <div id="hero-collage" className="w-1/2 flex flex-wrap gap-16">
-          <div className="w-5/12 bg-cover bg-no-repeat bg-center h-64 bg-[url('/TeamHeroTable1.jpeg')]"></div>
-          <div className="w-5/12 bg-cover bg-no-repeat bg-center h-64 bg-[url('/TeamHeroTable2.jpeg')]"></div>
-          <div className="w-5/12 bg-cover bg-no-repeat bg-center h-64 bg-[url('/TeamHeroTable3.jpeg')]"></div>
-          <div className="w-5/12 bg-cover bg-no-repeat bg-center h-64 bg-[url('/TeamHeroTable4.jpeg')]"></div>
+      <div id="hero" className="w-full flex flex-col md:h-[50rem] md:flex-row gap-6">
+        <div className="h-96 w-full md:h-auto md:w-1/2 bg-cover bg-no-repeat bg-center bg-[url('/teamHero.jpeg')]"></div>
+        <div id="hero-collage" className="w-full md:w-1/2 flex flex-wrap">
+          <div className="w-1/2 h-32 md:h-auto bg-cover bg-no-repeat bg-center bg-[url('/TeamHeroTable1.jpeg')]"></div>
+          <div className="w-1/2 h-32 md:h-auto bg-cover bg-no-repeat bg-center bg-[url('/TeamHeroTable2.jpeg')]"></div>
+          <div className="w-1/2 h-32 md:h-auto bg-cover bg-no-repeat bg-center bg-[url('/TeamHeroTable3.jpeg')]"></div>
+          <div className="w-1/2 h-32 md:h-auto bg-cover bg-no-repeat bg-center bg-[url('/TeamHeroTable4.jpeg')]"></div>
         </div>
       </div>
+
       <TeamMembers />
 
-      <div className="flex flex-col items-center justify-center h-screen p-4 
-    bg-white">
+      <div className="flex flex-col items-center justify-center h-screen p-4 bg-white md:h-[30rem]">
         <div className="max-w-md mx-auto text-center mb-8">
         <h2 className="text-4xl font-bold">Get answers to all your questions.</h2>
         <p className="text-xl leading-relaxed mb-8">

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import AboutusTeam1 from "/AboutusTeam1.png"
 import AboutusTeam2 from "/AboutusTeam2.jpeg"
 import AboutusTeam3 from "/AboutusTeam3.jpeg"
+import TeamMembers from "../components/TeamMembers.";
 
 //tailwind css
 //let us use react router and links whenever we can
@@ -69,73 +70,7 @@ function AboutsContent () {
         </div>
 
 
-        <div id="team-members-table" class="flex flex-col md:flex-row md:justify-center md:items-center md:w-full">
-        <div id="first-member" class="bg-white p-4">        
-            <div  className="bg-white w-full flex justify-center items-center p-4 gap-3">
-            <div className="max-w-[1200px] w-full text-center">
-                <img src={AboutusTeam1} className="w-4/5 mt-8 pb-6 mx-auto "/>
-                <h1 className="text-4xl font-bold text-gray-800 mb-8">Username</h1>
-                <p className="text-gray-600 mb-8">
-                Profession               
-                </p>
-                <div className="flex justify-center mt-8">
-                    <Link to="https://facebook.com" className="mx-4 inline-block" title="Facebook">
-                        <i className="fa-brands fa-facebook fa-4x text-blue-500 hover:text-pink-600"></i>
-                    </Link>
-                    <Link to="https://instagram.com" className="mx-4 inline-block" title="Instagram">
-                        <i className="fa-brands fa-instagram fa-4x text-pink-600 hover:text-blue-500"></i>
-                    </Link>
-                    <Link to="https://twitter.com" className="mx-4 inline-block" title="Twitter">
-                        <i className="fa-brands fa-twitter fa-4x text-blue-500 hover:text-pink-600"></i>
-                    </Link>
-                </div>
-            </div>
-        </div></div>
-        <div class="bg-white p-4">
-        <div id="second-member" className="bg-white w-full flex justify-center items-center p-4 gap-3">
-            <div className="max-w-[1200px] w-full text-center">
-                <img src={AboutusTeam2} className="w-4/5 mt-8 pb-6 mx-auto "/>
-                <h1 className="text-4xl font-bold text-gray-800 mb-8">Username</h1>
-                <p className="text-gray-600 mb-8">
-                Profession               
-                </p>
-                <div className="flex justify-center mt-8">
-                    <Link to="https://facebook.com" className="mx-4 inline-block" title="Facebook">
-                        <i className="fa-brands fa-facebook fa-4x text-blue-500 hover:text-pink-600"></i>
-                    </Link>
-                    <Link to="https://instagram.com" className="mx-4 inline-block" title="Instagram">
-                        <i className="fa-brands fa-instagram fa-4x text-pink-600 hover:text-blue-500"></i>
-                    </Link>
-                    <Link to="https://twitter.com" className="mx-4 inline-block" title="Twitter">
-                        <i className="fa-brands fa-twitter fa-4x text-blue-500 hover:text-pink-600"></i>
-                    </Link>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="bg-white p-4">
-        <div id="third-member" className="bg-white w-full flex justify-center items-center p-4 gap-3">
-            <div className="max-w-[1200px] w-full text-center">
-                <img src={AboutusTeam3} className="w-4/5 mt-8 pb-6 mx-auto "/>
-                <h1 className="text-4xl font-bold text-gray-800 mb-8">Username</h1>
-                <p className="text-gray-600 mb-8">
-                Profession               
-                </p>
-                <div className="flex justify-center mt-8">
-                    <Link to="https://facebook.com" className="mx-4 inline-block" title="Facebook">
-                        <i className="fa-brands fa-facebook fa-4x text-blue-500 hover:text-pink-600"></i>
-                    </Link>
-                    <Link to="https://instagram.com" className="mx-4 inline-block" title="Instagram">
-                        <i className="fa-brands fa-instagram fa-4x text-pink-600 hover:text-blue-500"></i>
-                    </Link>
-                    <Link to="https://twitter.com" className="mx-4 inline-block" title="Twitter">
-                        <i className="fa-brands fa-twitter fa-4x text-blue-500 hover:text-pink-600"></i>
-                    </Link>
-                </div>
-            </div>
-        </div>
-        </div>
-        </div>
+        <TeamMembers />
 
 
         </>
