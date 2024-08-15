@@ -4,6 +4,7 @@ import Shop from './pages/Shop';
 import ProductDetails from './pages/ProductDetails';
 import Contact from './pages/Contact';
 import Aboutus from './pages/Aboutus';
+import Team from './pages/Team';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -15,6 +16,7 @@ function App() {
       <Route exact path="/product-detail" component={ProductDetails} />
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/aboutus" component={Aboutus} />
+      <Route exact path="/team" component={Team} />
     </Router>
   );
 }
