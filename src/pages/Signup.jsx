@@ -1,11 +1,16 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Axios } from "axios";
+import axios from "axios";
 //use react hook form for form validation
 //use react router dom for routing
+//this code works inshallah (https://youtu.be/D2tPBaO4nbs?si=yN0Re0Mx0YmhLF1U&t=30)
 
 const Signup = () => {
-    const { register, handleSubmit, setError, clearErrors, formState: { errors } } = useForm();
+    const { register, handleSubmit, setError, clearErrors, watch, formState: { errors } } = useForm();
+    const axiosInstance = axios.create({
+        baseURL: 'https://workintech-fe-ecommerce.onrender.com',
+        timeout: 1000,
+    })
 
 
     return (
@@ -19,52 +24,156 @@ const Signup = () => {
                 of our platform.
             </p>
 
-            <form onSubmit={handleSubmit((data) => console.log(data))} className="flex flex-col">
-            <label className="mb-4">
-            Name:
-            <input
-            {...register("name", {
-                required: true,
-                minLength: {
-                value: 3,
-                message: "Minimum 3 characters",
-                },
-            })}
-            onChange={(e) => {
-                setValue("name", e.target.value);
-                validate("name");
-            }}
-            className={`border ${errors.name ? "border-red-500" : "border-gray-300"} rounded-md p-2 w-full`}
-            />
-            {errors.name && <p className="text-red-500">{errors.name.message}</p>}
-            </label>
-                <label className="mb-4">
-                    E-mail:
-                    <input
-                    {...register("email", { required: "This field is required", minLength: { value: 3, message: "Minimum 3 characters" } })}
-                    onChange={(e) => console.log(e.target.value)}
-                    className="border border-gray-300 rounded-md p-2 w-full"
-                    />
-                    {errors.name && <p className="text-red-500">{errors.name.message}</p>}
+            <form onSubmit={handleSubmit((data) => console.log(data))} className="flex flex-col w-96">
+
+                <div className="flex flex-col">
+                    <label className="mb-4">
+                        Name:
+                        <input
+                        {...register("name", {
+                            required: true,
+                            minLength: {
+                            value: 3,
+                            message: "Minimum 3 characters",
+                            },
+                        })}
+                        onChange={(e) => {
+                            setValue("name", e.target.value);
+                            validate("name");
+                        }}
+                        className={`w-full border ${errors.name ? "border-red-500" : "border-gray-300"} rounded-md p-2`}
+                        />
+                        {errors.name && <span className="text-red-500">{errors.name.message}</span>}
+                    </label>
+                </div>
+
+                <div className="flex flex-col">
+                    <label className="mb-4">
+                        E-mail:
+                        <input
+                        {...register("email", {
+                            required: "This field is required",
+                            pattern: {
+                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                            message: "Invalid email address",
+                            },
+                        })}
+                        onChange={(e) => console.log(e.target.value)}
+                        className={`border ${errors.email ? "border-red-500" : "border-gray-300"} rounded-md p-2 w-full`}
+                        />
+                        {errors.email && <p className="text-red-500">{errors.email.message}</p>}
+                    </label>
+                </div>
+
+                <div className="flex flex-col">
+                    <label className="mb-4">
+                        Password:
+                        <input
+                        {...register("password", { 
+                            required: "This field is required", 
+                            minLength: { value: 8, message: "Password must be atleast 8 characters" },
+                            pattern: {
+                                value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+                                message: "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character"
+                            }
+                        })}
+                        onChange={(e) => console.log(e.target.value)}
+                        className="border border-gray-300 rounded-md p-2 w-full"
+                        />
+                        {errors.password && <p className="text-red-500">{errors.password.message}</p>}
+                    </label>
+                </div>
+
+                <div className="flex flex-col">
+                    <label className="mb-4">
+                        Confirm Password:
+                        <input
+                        {...register("confirmPassword", {
+                            required: "This field is required",
+                            validate: (value) => value === watch("password") || "Passwords do not match",
+                        })}
+                        onChange={(e) => console.log(e.target.value)}
+                        className={`border ${errors.confirmPassword ? "border-red-500" : "border-gray-300"} rounded-md p-2 w-full`}
+                        />
+                        {errors.confirmPassword && <span className="text-red-500">Passwords do not match</span>}
+                    </label>
+                </div>
+                <label htmlFor="role" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select a role
+                <select id="role" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" {...register("role", { required: true })}>
+                    <option value="customer">Customer</option>
+                    <option value="store">Store</option>
+                </select>
                 </label>
-                <label className="mb-4">
-                    Password:
-                    <input
-                    {...register("password", { required: "This field is required", minLength: { value: 3, message: "Minimum 3 characters" } })}
-                    onChange={(e) => console.log(e.target.value)}
-                    className="border border-gray-300 rounded-md p-2 w-full"
-                    />
-                    {errors.name && <p className="text-red-500">{errors.name.message}</p>}
-                </label>
-                <label className="mb-4">
-                    Confirm Password:
-                    <input
-                    {...register("confirmPassword", { required: "This field is required", minLength: { value: 3, message: "Minimum 3 characters" } })}
-                    onChange={(e) => console.log(e.target.value)}
-                    className="border border-gray-300 rounded-md p-2 w-full"
-                    />
-                    {errors.name && <p className="text-red-500">{errors.name.message}</p>}
-                </label>
+                {errors.role && <p className="text-red-500">Role is required</p>}
+                {watch("role") === "store" && (
+                    <>
+                        <div className="flex flex-col mt-4">
+                            <label className="mb-4">
+                                Store Name:
+                                <input
+                                {...register("storename", {
+                                    required: "This field is required",
+                                    minLength: { value: 3, message: "Store name must be at least 3 characters" },
+                                })}
+                                className={`border ${errors.storename ? "border-red-500" : "border-gray-300"} rounded-md p-2 w-full`}
+                                />
+                                {errors.storename && <p className="text-red-500">{errors.storename.message}</p>}
+                            </label>
+                        </div>
+
+                        <div className="flex flex-col">
+                            <label className="mb-4">
+                                Store Phone:
+                                <input
+                                {...register("storephone", {
+                                    required: "This field is required",
+                                    pattern: {
+                                        value: /^(\+90|0)?\s?\d{10}$/,
+                                        message: "Phone number must be a valid Türkiye phone number"
+                                    }
+                                })}
+                                className={`border ${errors.storephone ? "border-red-500" : "border-gray-300"} rounded-md p-2 w-full`}
+                                />
+                                {errors.storephone && <p className="text-red-500">{errors.storephone.message}</p>}
+                            </label>
+                        </div>
+
+                        <div className="flex flex-col">
+                            <label className="mb-4">
+                                Store Tax ID:
+                                <input
+                                {...register("taxid", {
+                                    required: "This field is required",
+                                    pattern: {
+                                        value: /^T\d{2}[A-Z]{1}\d{6}$/,
+                                        message: "Tax ID must match the pattern TXXXXVXXXXXX"
+                                    }
+                                })}
+                                className={`border ${errors.taxid ? "border-red-500" : "border-gray-300"} rounded-md p-2 w-full`}
+                                />
+                                {errors.taxid && <p className="text-red-500">{errors.taxid.message}</p>}
+                            </label>
+                        </div>
+
+                        <div className="flex flex-col">
+                            <label className="mb-4">
+                                Store Bank Account:
+                                <input
+                                {...register("storebankaccount", {
+                                    required: "This field is required",
+                                    pattern: {
+                                        value: /^TR\d{2} \d{4} \d{4} \d{4} \d{4} \d{2}$/,
+                                        message: "Bank account must be a valid IBAN address"
+                                    }
+                                })}
+                                className={`border ${errors.storebankaccount ? "border-red-500" : "border-gray-300"} rounded-md p-2 w-full`}
+                                />
+                                {errors.storebankaccount && <p className="text-red-500">{errors.storebankaccount.message}</p>}
+                            </label>
+                        </div>
+                    </>
+                )}
+
                 <button
                     type="submit"
                     className="bg-blue-500 hover:bg-blue-700 rounded-md p-2 text-white"
