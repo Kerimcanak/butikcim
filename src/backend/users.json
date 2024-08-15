@@ -1,0 +1,76 @@
+  {
+    "name": "Ahmet Mehmet",
+    "email": "ahmet@example.com",
+    "password": "password123",
+    "role": "customer"
+  },
+  {
+    "name": "Ayşe Teyze",
+    "email": "ayse@example.com",
+    "password": "password123",
+    "role": "customer"
+  },
+  {
+    "name": "Bahaettin Timu8r",
+    "email": "bahaettin@example.com",
+    "password": "password123",
+    "role": "store",
+    "storename": "Bahaettin Dükkanı",
+    "storephone": "123-456-7890",
+    "taxid": "123456789",
+    "storebankaccount": "1234567890"
+  },
+  {
+    "name": "Ali Can",
+    "email": "alican@example.com",
+    "password": "password123",
+    "role": "customer"
+  },
+  {
+    "name": "Mihal Yıldırım",
+    "email": "mihal@example.com",
+    "password": "password123",
+    "role": "store",
+    "storename": "Mihal'in Dükkanı",
+    "storephone": "098-765-4321",
+    "taxid": "987654321",
+    "storebankaccount": "9876543210"
+  },
+  {
+    "name": "Sare Erbüke",
+    "email": "sareer@example.com",
+    "password": "password123",
+    "role": "customer"
+  },
+  {
+    "name": "Davut Lütfen",
+    "email": "davut@example.com",
+    "password": "password123",
+    "role": "store",
+    "storename": "Davut'un Dükkanı",
+    "storephone": "555-555-5555",
+    "taxid": "555555555",
+    "storebankaccount": "5555555555"
+  },
+  {
+    "name": "Emile Şen",
+    "email": "emile@example.com",
+    "password": "password123",
+    "role": "customer"
+  },
+  {
+    "name": "Kerim Vahaettin",
+    "email": "kerim@example.com",
+    "password": "password123",
+    "role": "store",
+    "storename": "Kerim'in Dükkanı",
+    "storephone": "777-777-7777",
+    "taxid": "777777777",
+    "storebankaccount": "7777777777"
+  },
+  {
+    "name": "Lütfi Enes",
+    "email": "lutfi@example.com",
+    "password": "password123",
+    "role": "customer"
+  }
