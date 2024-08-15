@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom';
+import Header from '../layout/Header';
+import Footer from '../layout/Footer';
 
 const Contact = () => (
+  <>
+  <Header />
   <div className="flex flex-col items-center justify-center h-screen p-4 
 bg-white">
     <div className="max-w-md mx-auto text-center mb-8">
@@ -28,6 +32,8 @@ of classical physics.
       </Link>
     </div>
   </div>
+  <Footer />
+  </>
 );
 
 export default Contact;
