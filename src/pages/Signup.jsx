@@ -12,6 +12,13 @@ const Signup = () => {
         timeout: 1000,
     })
 
+    const onSubmitHandler = (data) => {
+        // handle the form data here
+        const { confirmPassword, ...formData } = data;
+        console.log(formData);
+      };
+    
+
 
     return (
         <div className="flex flex-col items-center justify-center h-screen p-4 bg-white">
@@ -24,7 +31,7 @@ const Signup = () => {
                 of our platform.
             </p>
 
-            <form onSubmit={handleSubmit((data) => console.log(data))} className="flex flex-col w-96">
+            <form onSubmit={handleSubmit(onSubmitHandler)} className="flex flex-col w-96">
 
                 <div className="flex flex-col">
                     <label className="mb-4">
@@ -73,7 +80,7 @@ const Signup = () => {
                             required: "This field is required", 
                             minLength: { value: 8, message: "Password must be atleast 8 characters" },
                             pattern: {
-                                value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+                                value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#½])[A-Za-z\d@$!%*?&#½]{8,}$/,
                                 message: "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character"
                             }
                         })}
@@ -145,7 +152,7 @@ const Signup = () => {
                                 {...register("taxid", {
                                     required: "This field is required",
                                     pattern: {
-                                        value: /^T\d{2}[A-Z]{1}\d{6}$/,
+                                        value: /^T\d{4}V\d{6}$/,
                                         message: "Tax ID must match the pattern TXXXXVXXXXXX"
                                     }
                                 })}
@@ -162,7 +169,7 @@ const Signup = () => {
                                 {...register("storebankaccount", {
                                     required: "This field is required",
                                     pattern: {
-                                        value: /^TR\d{2} \d{4} \d{4} \d{4} \d{4} \d{2}$/,
+                                        value: /^TR\d{24}$/,
                                         message: "Bank account must be a valid IBAN address"
                                     }
                                 })}
@@ -177,7 +184,6 @@ const Signup = () => {
                 <button
                     type="submit"
                     className="bg-blue-500 hover:bg-blue-700 rounded-md p-2 text-white"
-                    onClick={handleSubmit((data) => console.log(data))}
                 >
                     Sign up
                 </button>
