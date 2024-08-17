@@ -5,7 +5,7 @@ import { toast, ToastContainer } from "react-toastify";
 import Header from "../layout/Header";
 import Footer from "../layout/Footer";
 import { useDispatch } from 'react-redux'; // For accessing dispatch function
-import { handleSignupData } from "../redux/clientThunks";
+import { roleThunks } from "../redux/clientThunks";
 //use react hook form for form validation
 //use react router dom for routing
 //this code works inshallah (https://youtu.be/D2tPBaO4nbs?si=yN0Re0Mx0YmhLF1U&t=30)
@@ -42,7 +42,7 @@ const Signup = () => {
             };
             console.log("Formatted Data:", formattedData);
             const roleThunk = formattedData.role_id;
-            dispatch(handleSignupData(roleThunk));
+            dispatch(roleThunks(roleThunk));
             const response = await axiosInstance.post('/api/signup', formattedData);
             if (response.status === 200) {
                 toast.success("You need to click link in email to activate your account!!");

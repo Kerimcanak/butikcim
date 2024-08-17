@@ -1,11 +1,11 @@
-import { SET_ROLES } from './clientReducer';
+import { thunk } from 'redux-thunk';
+import { setRoles } from './clientReducer';
 
-export const clientThunks = {
-  handleRole: (roleThunk) => (dispatch) => {
-    dispatch({
-      type: SET_ROLES,
-      payload: roleThunk,
-    });
-  },
+export const roleThunks = {
+    setRoles: thunk((_, {dispatch}, roleThunk) => {
+        dispatch({
+            type: setRoles,
+            payload: roleThunk,
+        });
+    }),
 };
-
