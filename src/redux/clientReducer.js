@@ -1,4 +1,6 @@
 // clientReducer.js
+import { createAction } from '@reduxjs/toolkit';
+
 
 const initialState = {
   user: {},
@@ -35,3 +37,9 @@ export default function clientReducer(state = initialState, action) {
       return state;
   }
 }
+
+
+export const setUser = createAction('SET_USER');
+export const setRoles = createAction('SET_ROLES');
+export const setTheme = createAction('SET_THEME');
+export const setLanguage = createAction('SET_LANGUAGE');

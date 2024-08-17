@@ -1,3 +1,5 @@
+import { createAction } from '@reduxjs/toolkit';
+
 const initialState = {
     categories: [],
     productList: [],
@@ -53,3 +55,11 @@ export default function productReducer(state = initialState, action) {
             return state;
     }
 }
+
+export const setCategories = createAction('SET_CATEGORIES');
+export const setProductList = createAction('SET_PRODUCTLIST');
+export const setTotal = createAction('SET_TOTAL');
+export const setOffset = createAction('SET_OFFSET');
+export const setLimit = createAction('SET_LIMIT');
+export const setFilter = createAction('SET_FILTER');
+export const setFetchState = createAction('SET_FETCH_STATE');

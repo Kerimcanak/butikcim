@@ -1,3 +1,5 @@
+import { createAction } from '@reduxjs/toolkit';
+
 const initialState = {
     cart: [],
     payment: {},
@@ -25,3 +27,7 @@ export default function shoppingCartReducer(state = initialState, action) {
       return state;
   }
 }
+
+export const setCart = createAction('SET_CART');
+export const setPayment = createAction('SET_PAYMENT');
+export const setAddress = createAction('SET_ADDRESS');
