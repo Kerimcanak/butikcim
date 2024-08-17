@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setUser } from "../redux/clientReducer";
 
 const Header = () => {
   const { user } = useSelector((state) => state.client); // Access user object from clientReducer
-  const userEmail = user?.email; // Access only email of user from clientReducer
-  console.log(userEmail);
+  const userEmail = user ? user.email : ''; // Access only email of user from clientReducer
+  const dispatch = useDispatch(); // Accessing dispatch function
+  var gravatar = require('gravatar');
 
   return (
     <header className="bg-white shadow-lg">
@@ -18,13 +20,16 @@ const Header = () => {
           <i className="fas fa-shopping-cart text-black mr-2" />
           <i className="fas fa-bars text-black" />
           {userEmail && ( // Conditional check for userEmail
+            <div className="flex items-center">
+            <img src={gravatar.url(userEmail, { s: '100' })} alt="" className="w-8 h-8 rounded-full ml-4" />
             <span className="ml-4 text-black">
-              Welcome, {userEmail}
+              Welcome, {userEmail} (<Link to="/" onClick={() => dispatch(setUser({ email: '', role: '' }))}>log out</Link>)
             </span>
+          </div>
           )}
           {!userEmail && ( // Display message if user is not logged in
             <span className="ml-4 text-black">
-              You did not log in
+              You did not log in (<Link to="/signin">log in</Link>)
             </span>
           )}
         </div>

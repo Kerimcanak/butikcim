@@ -8,8 +8,9 @@ import shoppingCartReducer from './shoppingCartReducer';
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['shoppingCart'] // Persist only the shoppingCart reducer
+  whitelist: ['client', 'product', 'shoppingCart'] // Persist all reducers
 };
+
 
 const rootReducer = combineReducers({
   client: clientReducer,

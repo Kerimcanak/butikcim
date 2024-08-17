@@ -18,7 +18,6 @@ export default function clientReducer(state = initialState, action) {
   switch (action.type) {
     case 'SET_USER':
       console.log("the set user thunk works yo:" + action.payload);
-      JSON.parse(action.payload);
       return {
         ...state,
         user: action.payload,

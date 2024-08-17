@@ -42,10 +42,10 @@ const Signin = () => {
         (user) => user.email === data.email && user.password === data.password
       );
       if (userExists) {
-        dispatch(setUser(JSON.stringify(userExists)));
+        dispatch(setUser(userExists));
         toast.success('Login successful');
         setTimeout(() => {
-          window.location.href = '/';
+          window.history.back();
         }, 1000);
       } else {
         toast.error('Invalid credentials');
@@ -120,8 +120,15 @@ const Signin = () => {
             {...register("keepMeSignedIn")}
             type="checkbox"
             className="border border-gray-300 rounded-md mr-2"
+            onChange={(e) => {
+              if (e.target.checked) {
+                localStorage.setItem('token', Math.random().toString(36).substring(7));
+              } else {
+                localStorage.removeItem('token')
+              }
+            }}
           />
-          <label htmlFor="keepmesignedcheckbox" className="text-sm font-medium text-gray-900 dark:text-white">Keep me signed in</label>
+          <label htmlFor="keepmesignedcheckbox" className="text-sm font-medium text-gray-900 dark:text-white">Remember me</label>
         </div>
 
         <button type="submit" className="bg-blue-500 hover:bg-blue-700 rounded-md p-2 text-white flex items-center justify-center">
