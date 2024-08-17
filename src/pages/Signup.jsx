@@ -35,9 +35,6 @@ const Signup = () => {
                 },
             };
             const response = await axiosInstance.post('/api/signup', formattedData);
-            const users = require('../backend/users.json');
-            users.push(formattedData);
-            require('fs').writeFileSync('../backend/users.json', JSON.stringify(users));
             if (response.status === 200) {
                 toast.success("You need to click link in email to activate your account!!");
                 setTimeout(() => {
