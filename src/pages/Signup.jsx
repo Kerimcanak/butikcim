@@ -4,6 +4,8 @@ import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import Header from "../layout/Header";
 import Footer from "../layout/Footer";
+import { useDispatch } from 'react-redux'; // For accessing dispatch function
+import { signupUser } from '../redux/clientThunks'; // Import the thunk
 //use react hook form for form validation
 //use react router dom for routing
 //this code works inshallah (https://youtu.be/D2tPBaO4nbs?si=yN0Re0Mx0YmhLF1U&t=30)
@@ -34,6 +36,7 @@ const Signup = () => {
                     bank_account: user.storebankaccount,
                 },
             };
+            console.log("Formatted Data:", formattedData);
             const response = await axiosInstance.post('/api/signup', formattedData);
             if (response.status === 200) {
                 toast.success("You need to click link in email to activate your account!!");
@@ -44,6 +47,7 @@ const Signup = () => {
                 throw new Error('Signup unsuccessful!')
             }
         } catch (error) {
+            console.log("Formatted Data:", formattedData);
             toast.error(error.message);
         } finally {
             setIsSubmitting(false);
