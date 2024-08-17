@@ -1,8 +1,6 @@
-import { createSlice } from '@reduxjs/toolkit';
-
 const initialState = {
     categories: [],
-    products: [],
+    productList: [],
     total: 0,
     limit: 25,
     offset: 0,
@@ -10,32 +8,48 @@ const initialState = {
     fetchState: 'NOT_FETCHED',
 };
 
-const productSlice = createSlice({
-  name: 'products',
-  initialState,
-  reducers: {
-    fetchProducts(state, action) {
-      state.fetchState = 'FETCHING';
-      state.filter = action.payload.filter;
-      state.limit = action.payload.limit;
-      state.offset = action.payload.offset;
-    },
-    setCategories(state, action) {
-      state.categories = action.payload;
-    },
-    setTotal(state, action) {
-      state.total = action.payload;
-    },
-    setProducts(state, action) {
-      state.products = action.payload;
-      state.fetchState = 'FETCHED';
-    },
-    setFetchState(state, action) {
-      state.fetchState = action.payload;
-    },
-  },
-});
-
-export const { fetchProducts, setCategories, setTotal, setProducts, setFetchState } = productSlice.actions;
-export default productSlice.reducer;
-
+export default function productReducer(state = initialState, action) {
+    switch (action.type) {
+        case 'SET_CATEGORIES':
+            return {
+                ...state,
+                categories: action.payload,
+            };
+        case 'SET_PRODUCTLIST':
+                return {
+                    ...state,
+                    products: action.payload,
+                };
+        case 'SET_TOTAL':
+            return {
+                ...state,
+                total: action.payload,
+            };
+        case 'SET_OFFSET':
+            return {
+                ...state,
+                offset: action.payload,
+            };
+        case 'SET_LIMIT':
+            return {
+                ...state,
+                limit: action.payload,
+            };
+        case 'SET_FILTER':
+            return {
+                ...state,
+                filter: action.payload,
+            };
+        case 'SET_FETCH_STATE':
+            const allowedStates = ['NOT_FETCHED', 'FETCHING', 'FETCHED', 'FAILED'];
+            if (!allowedStates.includes(action.payload)) {
+                throw new Error(`Invalid fetch state: ${action.payload}`);
+            }
+            return {
+                ...state,
+                fetchState: action.payload,
+            };
+        default:
+            return state;
+    }
+}

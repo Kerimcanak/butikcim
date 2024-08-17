@@ -1,5 +1,4 @@
 // clientReducer.js
-import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   user: {},
@@ -10,30 +9,39 @@ const initialState = {
   language: '',
 };
 
-const clientSlice = createSlice({
-  name: 'client',
-  initialState,
-  reducers: {
-    setUser: (state, action) => {
-      state.user = action.payload;
-    },
-    setAdressList: (state, action) => {
-      state.addressList = action.payload;
-    },
-    setCreditCards: (state, action) => {
-      state.creditCards = action.payload;
-    },
-    setRoles: (state, action) => {
-      state.roles = action.payload;
-    },
-    setTheme: (state, action) => {
-      state.theme = action.payload;
-    },
-    setLanguage: (state, action) => {
-      state.language = action.payload;
-    },
-  },
-});
-
-export const { setUser } = clientSlice.actions;
-export default clientSlice.reducer;
+export default function clientReducer(state = initialState, action) {
+  switch (action.type) {
+    case 'SET_USER':
+      return {
+        ...state,
+        user: action.payload,
+      };
+    case 'SET_ADDRESS_LIST':
+      return {
+        ...state,
+        addressList: action.payload,
+      };
+    case 'SET_CREDIT_CARDS':
+      return {
+        ...state,
+        creditCards: action.payload,
+      };
+    case 'SET_ROLES':
+      return {
+        ...state,
+        roles: action.payload,
+      };
+    case 'SET_THEME':
+      return {
+        ...state,
+        theme: action.payload,
+      };
+    case 'SET_LANGUAGE':
+      return {
+        ...state,
+        language: action.payload,
+      };
+    default:
+      return state;
+  }
+}
