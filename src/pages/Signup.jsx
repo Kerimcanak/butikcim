@@ -1,6 +1,9 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
+import Header from "../layout/Header";
+import Footer from "../layout/Footer";
 //use react hook form for form validation
 //use react router dom for routing
 //this code works inshallah (https://youtu.be/D2tPBaO4nbs?si=yN0Re0Mx0YmhLF1U&t=30)
@@ -12,15 +15,46 @@ const Signup = () => {
         timeout: 1000,
     })
 
-    const onSubmitHandler = (data) => {
-        // handle the form data here
-        const { confirmPassword, ...formData } = data;
-        console.log(formData);
-      };
+    const onSubmitHandler = async (data) => {
+        try {
+            // handle the form data here
+            const { confirmPassword, ...formData } = data;
+            const { store, ...user } = formData;
+            const formattedData = {
+                name: user.name,
+                email: user.email,
+                password: user.password,
+                role_id: user.role_id,
+                store: {
+                    name: user.storename,
+                    phone: user.storephone,
+                    tax_no: user.taxid,
+                    bank_account: user.storebankaccount,
+                },
+            };
+            const response = await axiosInstance.post('/api/signup', formattedData);
+            const users = require('../backend/users.json');
+            users.push(formattedData);
+            require('fs').writeFileSync('../backend/users.json', JSON.stringify(users));
+            if (response.status === 200) {
+                toast.success("Signup successful!");
+                setTimeout(() => {
+                    window.location.href = "/";
+                }, 1000);
+            } else {
+                throw new Error('Signup unsuccessful!')
+            }
+        } catch (error) {
+            toast.error(error.message);
+        }
+    };
     
 
 
     return (
+        <>
+        <Header />
+        <ToastContainer />
         <div className="flex flex-col items-center justify-center h-screen p-4 bg-white">
             <div className="h-24 w-24 rounded-full bg-red-500 text-white flex items-center justify-center text-4xl">
                <i className="fa-solid fa-address-card"></i>
@@ -189,6 +223,8 @@ const Signup = () => {
                 </button>
             </form>
         </div>
+        <Footer />
+        </>
     );
 };
 
