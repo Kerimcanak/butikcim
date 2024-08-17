@@ -11,6 +11,8 @@ const Signin = () => {
     console.log("Form Data:", data);
   };
 
+  const {watch} = useForm();
+
   return (
     <>
     <div className="flex flex-col items-center justify-center h-screen p-4 bg-white">
