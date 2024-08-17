@@ -1,0 +1,27 @@
+{
+    "users": [
+      {
+        "email": "customer@commerce.com",
+        "password": "123456",
+        "role": "customer"
+      },
+      {
+        "email": "store@commerce.com",
+        "password": "123456",
+        "role": "store",
+        "store": {
+          "name": "Store 1",
+          "phone": "905551234567",
+          "taxId": "1111111111",
+          "bankAccount": "TR1234567890123456"
+        }
+      },
+      {
+        "email": "admin@commerce.com",
+        "password": "123456",
+        "role": "admin"
+      }
+    ]
+  }
+
+  
