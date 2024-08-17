@@ -6,6 +6,7 @@ import Contact from './pages/Contact';
 import Aboutus from './pages/Aboutus';
 import Team from './pages/Team';
 import Signup from './pages/Signup';
+import Signin from './pages/SignIn';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import 'react-toastify/dist/ReactToastify.css'
@@ -20,6 +21,7 @@ function App() {
       <Route exact path="/aboutus" component={Aboutus} />
       <Route exact path="/team" component={Team} />
       <Route exact path="/signup" component={Signup} />
+      <Route exact path="/signin" component={Signin} />
     </Router>
   );
 }
