@@ -16,16 +16,6 @@ export default function clientReducer(state = initialState, action) {
         ...state,
         user: action.payload,
       };
-    case 'SET_ADDRESS_LIST':
-      return {
-        ...state,
-        addressList: action.payload,
-      };
-    case 'SET_CREDIT_CARDS':
-      return {
-        ...state,
-        creditCards: action.payload,
-      };
     case 'SET_ROLES':
       return {
         ...state,
