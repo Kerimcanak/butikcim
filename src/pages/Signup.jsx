@@ -15,7 +15,9 @@ const Signup = () => {
         timeout: 1000,
     })
 
+    const [isSubmitting, setIsSubmitting] = React.useState(false);
     const onSubmitHandler = async (data) => {
+        setIsSubmitting(true);
         try {
             // handle the form data here
             const { confirmPassword, ...formData } = data;
@@ -37,18 +39,20 @@ const Signup = () => {
             users.push(formattedData);
             require('fs').writeFileSync('../backend/users.json', JSON.stringify(users));
             if (response.status === 200) {
-                toast.success("Signup successful!");
+                toast.success("You need to click link in email to activate your account!!");
                 setTimeout(() => {
-                    window.location.href = "/";
+                    window.history.back();
                 }, 1000);
             } else {
                 throw new Error('Signup unsuccessful!')
             }
         } catch (error) {
             toast.error(error.message);
+        } finally {
+            setIsSubmitting(false);
         }
     };
-    
+ 
 
 
     return (
@@ -216,10 +220,19 @@ const Signup = () => {
                 )}
 
                 <button
-                    type="submit"
-                    className="bg-blue-500 hover:bg-blue-700 rounded-md p-2 text-white"
+                type="submit"
+                className="bg-blue-500 hover:bg-blue-700 rounded-md p-2 text-white flex items-center justify-center"
+                disabled={isSubmitting}
                 >
-                    Sign up
+                {/*{isSubmitting ? (
+                    <svg className="animate-spin h-5 w-5 text-white mr-2" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"  
+                stroke-linecap="round" stroke-linejoin="round" />
+                    <line class="opacity-75" x1="12" y1="6" x2="12" y2="12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                ) : null}*/
+                /*this spinner works, but it is disabled as requested*/}
+                Sign up
                 </button>
             </form>
         </div>
