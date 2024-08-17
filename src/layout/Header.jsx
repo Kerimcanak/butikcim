@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const Header = () => {
-  const user = useSelector((state) => state.client.user); // Access user from clientReducer
-  console.log(user);
+  const { user } = useSelector((state) => state.client); // Access user object from clientReducer
+  const userEmail = user?.email; // Access only email of user from clientReducer
+  console.log(userEmail);
 
   return (
     <header className="bg-white shadow-lg">
@@ -16,12 +17,12 @@ const Header = () => {
           <i className="fas fa-search text-black mr-2" />
           <i className="fas fa-shopping-cart text-black mr-2" />
           <i className="fas fa-bars text-black" />
-          {user && user.email && ( // Conditional check for user and email
+          {userEmail && ( // Conditional check for userEmail
             <span className="ml-4 text-black">
-              Welcome, {user}
+              Welcome, {userEmail}
             </span>
           )}
-          {!user && ( // Display message if user is not logged in
+          {!userEmail && ( // Display message if user is not logged in
             <span className="ml-4 text-black">
               You did not log in
             </span>

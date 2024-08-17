@@ -42,10 +42,10 @@ const Signin = () => {
         (user) => user.email === data.email && user.password === data.password
       );
       if (userExists) {
-        dispatch(setUser(data.email));
+        dispatch(setUser(JSON.stringify(userExists)));
         toast.success('Login successful');
         setTimeout(() => {
-          window.history.back();
+          window.location.href = '/';
         }, 1000);
       } else {
         toast.error('Invalid credentials');
