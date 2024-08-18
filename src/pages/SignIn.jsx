@@ -13,20 +13,9 @@ const Signin = () => {
     const { register, handleSubmit, getValues, formState: { errors } } = useForm();
 
   const dispatch = useDispatch(); // Accessing dispatch function
+  //email define for tokenEmail
 
   //token for accounts
-  const tokenEmail = (email) => {
-    switch (email) {
-      case 'customer@commerce.com':
-        return 'customer1234567890123456789012345678901234567890123456789012345';
-      case 'store@commerce.com':
-        return 'store1234567890123456789012345678901234567890123456789012345';
-      case 'admin@commerce.com':
-        return 'admin1234567890123456789012345678901234567890123456789012345';
-      default:
-        return 'Invalid email';
-    }
-  };
 
   const onSubmitHandler = async (data) => {
     await loginThunk(data)(dispatch);
@@ -59,6 +48,7 @@ const Signin = () => {
       );
       if (userExists) {
         dispatch(setUser(userExists));
+        localStorage.setItem('token', userExists.role);
         toast.success('Login successful');
         setTimeout(() => {
           window.history.back();
@@ -138,10 +128,10 @@ const Signin = () => {
             type="checkbox"
             className="border border-gray-300 rounded-md mr-2"
             onChange={(e) => {
-              if (e.target.checked) {
-                localStorage.setItem('token', tokenEmail(getValues('email')));
+              if (!e.target.checked) {
+                localStorage.removeItem('token');
               } else {
-                localStorage.removeItem('token')
+                return
               }
             }}
           />

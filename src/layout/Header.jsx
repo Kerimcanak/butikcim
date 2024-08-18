@@ -1,24 +1,45 @@
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { setUser } from "../redux/clientReducer";
+import { useMemo } from "react";
+
+const tokenMap = {
+  customerToken: { email: 'customer@commerce.com', role: 'customer' },
+  storeToken: { email: 'store@commerce.com', role: 'store' },
+  adminToken: { email: 'admin@commerce.com', role: 'admin' },
+};
 
 const Header = () => {
-  const { user } = useSelector((state) => state.client); // Access user object from clientReducer
+  const { user } = useSelector((state) => state.client, shallowEqual); // Use shallowEqual to reduce re-renders
   const userEmail = user ? user.email : ''; // Access only email of user from clientReducer
   const dispatch = useDispatch(); // Accessing dispatch function
   var gravatar = require('gravatar');
 
-  const customerToken = 'customer1234567890123456789012345678901234567890123456789012345';
-  const storeToken = 'store1234567890123456789012345678901234567890123456789012345';
-  const adminToken = 'admin1234567890123456789012345678901234567890123456789012345';
+  const storedToken = useMemo(() => localStorage.getItem('token'), []); // Memoize the token value
+  const userConfig = useMemo(() => {
+    if (!storedToken) return null;
+    return {
+      email:
+        storedToken === 'customer'
+          ? 'customer@commerce.com'
+          : storedToken === 'store'
+          ? 'store@commerce.com'
+          : storedToken === 'admin'
+          ? 'admin@commerce.com'
+          : '',
+      role:
+        storedToken === 'customer'
+          ? 'customer'
+          : storedToken === 'store'
+          ? 'store'
+          : storedToken === 'admin'
+          ? 'admin'
+          : '',
+    };
+  }, [storedToken]); // Re-run only when the token changes
 
-  const storedToken = localStorage.getItem('token');
-  if (storedToken === customerToken) {
-    dispatch(setUser({ email: 'customer@commerce.com', role: 'customer' }));
-  } else if (storedToken === storeToken) {
-    dispatch(setUser({ email: 'store@commerce.com', role: 'store' }));
-  } else if (storedToken === adminToken) {
-    dispatch(setUser({ email: 'admin@commerce.com', role: 'admin' }));
+  if (userConfig) {
+    dispatch(setUser(userConfig));
   }
 
   return (
@@ -36,7 +57,7 @@ const Header = () => {
             <div className="flex items-center">
             <img src={gravatar.url(userEmail, { s: '100' })} alt="" className="w-8 h-8 rounded-full ml-4" />
             <span className="ml-4 text-black">
-              Welcome, {userEmail} (<Link to="/" onClick={() => dispatch(setUser({ email: '', role: '' }))}>log out</Link>)
+              Welcome, {userEmail} (<Link to="/" onClick={() => { dispatch(setUser({ email: '', role: '' })); localStorage.removeItem('token'); }}>log out</Link>)
             </span>
           </div>
           )}
