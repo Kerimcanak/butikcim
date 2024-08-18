@@ -13,6 +13,7 @@ export const verifyEndpoint = (token) => {
     } else {
         console.log("token is invalid")
         localStorage.removeItem('token');
+        axios.defaults.headers.common['Authorization'] = '';
         return null;
     }
 }
