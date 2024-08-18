@@ -11,6 +11,8 @@ export const verifyEndpoint = (token) => {
         console.log("token says you are an admin")
         return 'admin';
     } else {
+        console.log("token is invalid")
+        localStorage.removeItem('token');
         return null;
     }
 }
