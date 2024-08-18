@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { setUser } from "../redux/clientReducer";
 import { useMemo } from "react";
+import axios from "axios";
 
 const tokenMap = {
   customerToken: { email: 'customer@commerce.com', role: 'customer' },
@@ -42,6 +43,23 @@ const Header = () => {
     dispatch(setUser(userConfig));
   }
 
+  //check if tokens align with backend tokens
+  const token = localStorage.getItem('token');
+  if (token) {
+    const role = verifyEndpoint(token);
+    if (role) {
+      axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    } else {
+      localStorage.removeItem('token');
+      dispatch(setUser(null));
+    }
+  }
+
+  const logoutHandler = () => {
+    localStorage.removeItem('token');
+    dispatch(setUser(null));
+  };
+
   return (
     <header className="bg-white shadow-lg">
       <div className="flex md:flex-row justify-between px-4 py-2">
@@ -57,7 +75,7 @@ const Header = () => {
             <div className="flex items-center">
             <img src={gravatar.url(userEmail, { s: '100' })} alt="" className="w-8 h-8 rounded-full ml-4" />
             <span className="ml-4 text-black">
-              Welcome, {userEmail} (<a href="#" onClick={() => {dispatch(setUser({ email: '', role: '' })); localStorage.removeItem('token'); window.location.href = '/'; }}>log out</a>)
+              Welcome, {userEmail} (<a href="#" onClick={logoutHandler}>log out</a>)
             </span>
           </div>
           )}
