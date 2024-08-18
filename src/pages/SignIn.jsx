@@ -4,6 +4,8 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { toast, ToastContainer } from "react-toastify";
 import { setUser } from '../redux/clientReducer';
+import Header from '../layout/Header';
+import Footer from '../layout/Footer';
 //use react router dom for routing
 //this code works inshallah (https://youtu.be/D2tPBaO4nbs?si=yN0Re0Mx0YmhLF1U&t=30)
 
@@ -11,6 +13,20 @@ const Signin = () => {
     const { register, handleSubmit, getValues, formState: { errors } } = useForm();
 
   const dispatch = useDispatch(); // Accessing dispatch function
+
+  //token for accounts
+  const tokenEmail = (email) => {
+    switch (email) {
+      case 'customer@commerce.com':
+        return 'customer1234567890123456789012345678901234567890123456789012345';
+      case 'store@commerce.com':
+        return 'store1234567890123456789012345678901234567890123456789012345';
+      case 'admin@commerce.com':
+        return 'admin1234567890123456789012345678901234567890123456789012345';
+      default:
+        return 'Invalid email';
+    }
+  };
 
   const onSubmitHandler = async (data) => {
     await loginThunk(data)(dispatch);
@@ -59,6 +75,7 @@ const Signin = () => {
 
   return (
     <>
+    <Header />
     <div className="flex flex-col items-center justify-center h-screen p-4 bg-white">
         <ToastContainer />
     <div className="h-24 w-24 rounded-full bg-red-500 text-white flex items-center justify-center text-4xl">
@@ -122,7 +139,7 @@ const Signin = () => {
             className="border border-gray-300 rounded-md mr-2"
             onChange={(e) => {
               if (e.target.checked) {
-                localStorage.setItem('token', Math.random().toString(36).substring(7));
+                localStorage.setItem('token', tokenEmail(getValues('email')));
               } else {
                 localStorage.removeItem('token')
               }
@@ -136,6 +153,7 @@ const Signin = () => {
         </button>
       </form>
 </div>
+<Footer />
     </>
   );
 };

@@ -8,6 +8,19 @@ const Header = () => {
   const dispatch = useDispatch(); // Accessing dispatch function
   var gravatar = require('gravatar');
 
+  const customerToken = 'customer1234567890123456789012345678901234567890123456789012345';
+  const storeToken = 'store1234567890123456789012345678901234567890123456789012345';
+  const adminToken = 'admin1234567890123456789012345678901234567890123456789012345';
+
+  const storedToken = localStorage.getItem('token');
+  if (storedToken === customerToken) {
+    dispatch(setUser({ email: 'customer@commerce.com', role: 'customer' }));
+  } else if (storedToken === storeToken) {
+    dispatch(setUser({ email: 'store@commerce.com', role: 'store' }));
+  } else if (storedToken === adminToken) {
+    dispatch(setUser({ email: 'admin@commerce.com', role: 'admin' }));
+  }
+
   return (
     <header className="bg-white shadow-lg">
       <div className="flex md:flex-row justify-between px-4 py-2">

@@ -23,6 +23,11 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 const store = createStore(persistedReducer, {}, applyMiddleware());
 const persistor = persistStore(store);
 
+//when we close the website the persistence must be removed
+window.addEventListener('beforeunload', () => {
+  persistor.purge()
+})
+
 export default store
   
 export { persistor }
