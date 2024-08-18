@@ -57,7 +57,7 @@ const Header = () => {
             <div className="flex items-center">
             <img src={gravatar.url(userEmail, { s: '100' })} alt="" className="w-8 h-8 rounded-full ml-4" />
             <span className="ml-4 text-black">
-              Welcome, {userEmail} (<Link to="/" onClick={() => { dispatch(setUser({ email: '', role: '' })); localStorage.removeItem('token'); }}>log out</Link>)
+              Welcome, {userEmail} (<a href="#" onClick={() => {dispatch(setUser({ email: '', role: '' })); localStorage.removeItem('token'); window.location.href = '/'; }}>log out</a>)
             </span>
           </div>
           )}

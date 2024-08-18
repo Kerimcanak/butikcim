@@ -48,7 +48,12 @@ const Signin = () => {
       );
       if (userExists) {
         dispatch(setUser(userExists));
-        localStorage.setItem('token', userExists.role);
+        const { saveToken } = getValues();
+        if (saveToken) {
+          localStorage.setItem('token', userExists.role);
+        } else {
+          localStorage.removeItem('token');
+        }
         toast.success('Login successful');
         setTimeout(() => {
           window.history.back();
@@ -124,16 +129,9 @@ const Signin = () => {
 
         <div id="keepmesignedcheckbox" className="mb-4 flex items-center">
           <input
-            {...register("keepMeSignedIn")}
+            {...register("saveToken")}
             type="checkbox"
             className="border border-gray-300 rounded-md mr-2"
-            onChange={(e) => {
-              if (!e.target.checked) {
-                localStorage.removeItem('token');
-              } else {
-                return
-              }
-            }}
           />
           <label htmlFor="keepmesignedcheckbox" className="text-sm font-medium text-gray-900 dark:text-white">Remember me</label>
         </div>
