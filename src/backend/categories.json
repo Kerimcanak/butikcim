@@ -1,325 +1,52 @@
 [
-  { "listnum": "1",
-    "category": "Tops",
-    "buyers": "248"
-  },
-  {
-    "listnum": "2",
-    "category": "Bottoms",
-    "buyers": "223"
-  },
-  {
-    "listnum": "3",
-    "category": "Outerwear",
-    "buyers": "178"
-  },
-  {
-    "listnum": "4",
-    "category": "Dresses",
-    "buyers": "23"
-  },
-  {
-    "listnum": "5",
-    "category": "Shoes",
-    "buyers": "234"
-  },
-  {
-    "listnum": "6",
-    "category": "Jackets",
-    "buyers": "42"
-  },
-  {
-    "listnum": "7",
-    "category": "Pants",
-    "buyers": "17"
-  },
-  {
-    "listnum": "8",
-    "category": "Shorts",
-    "buyers": "21"
-  },
-  {
-    "listnum": "9",
-    "category": "Scarves",
-    "buyers": "36"
-  },
-  {
-    "listnum": "10",
-    "category": "Hats",
-    "buyers": "12"
-  },
-  {
-    "listnum": "11",
-    "category": "Socks",
-    "buyers": "6"
-  },
-  {
-    "listnum": "12",
-    "category": "Gloves",
-    "buyers": "2"
-  },
-  {
-    "listnum": "13",
-    "category": "Sweaters",
-    "buyers": "15"
-  },
-  {
-    "listnum": "14",
-    "category": "Swimwear",
-    "buyers": "10"
-  },
-  { "listnum": "15",
-    "category": "Accessories",
-    "buyers": "18"
-  },
-  { "listnum": "16",
-    "category": "Jewelry",
-    "buyers": "1"
-  },
-  { "listnum": "17",
-    "category": "Hoodies",
-    "buyers": "11"
-  },
-  { "listnum": "18",
-    "category": "Sweatshirts",
-    "buyers": "19"
-  },
-  { "listnum": "19",
-    "category": "Sweatpants",
-    "buyers": "29"
-  },
-  { "listnum": "20",
-    "category": "Suits",
-    "buyers": "30"
-  },
-  { "listnum": "21",
-    "category": "Skirts",
-    "buyers": "24"
-  },
-  { "listnum": "22",
-    "category": "Dresses",
-    "buyers": "25"
-  },
-  { "listnum": "23",
-    "category": "Jumpsuits",
-    "buyers": "20"
-  },
-  { "listnum": "24",
-    "category": "Coats",
-    "buyers": "23"
-  },
-  { "listnum": "25",
-    "category": "Blazers",
-    "buyers": "26"
-  },
-  { "listnum": "26",
-    "category": "Ties",
-    "buyers": "22"
-  },
-  { "listnum": "27",
-    "category": "Pocket Squares",
-    "buyers": "14"
-  },
-  { "listnum": "28",
-    "category": "Cufflinks",
-    "buyers": "9"
-  },
-  { "listnum": "29",
-    "category": "Watch",
-    "buyers": "28"
-  },
-  { "listnum": "30",
-    "category": "Sunglasses",
-    "buyers": "31"
-  },
-  { "listnum": "31",
-    "category": "Hats",
-    "buyers": "32"
-  },
-  { "listnum": "32",
-    "category": "Bags",
-    "buyers": "33"
-  },
-  { "listnum": "33",
-    "category": "Wallets",
-    "buyers": "34"
-  },
-  { "listnum": "34",
-    "category": "Belts",
-    "buyers": "35"
-  },
-  { "listnum": "35",
-    "category": "Scarves",
-    "buyers": "37"
-  },
-  { "listnum": "36",
-    "category": "Socks",
-    "buyers": "38"
-  },
-  { "listnum": "37",
-    "category": "Gloves",
-    "buyers": "39"
-  },
-  { "listnum": "38",
-    "category": "Sweaters",
-    "buyers": "40"
-  },
-  { "listnum": "39",
-    "category": "Swimwear",
-    "buyers": "41"
-  },
-  { "listnum": "40",
-    "category": "Accessories",
-    "buyers": "43"
-  },
-  { "listnum": "41",
-    "category": "Jewelry",
-    "buyers": "44"
-  },
-  { "listnum": "42",
-    "category": "Hoodies",
-    "buyers": "45"
-  },
-  { "listnum": "43",
-    "category": "Sweatshirts",
-    "buyers": "46"
-  },
-  { "listnum": "44",
-    "category": "Sweatpants",
-    "buyers": "47"
-  },
-  { "listnum": "45",
-    "category": "Suits",
-    "buyers": "48"
-  },
-  { "listnum": "46",
-    "category": "Skirts",
-    "buyers": "49"
-  },
-  { "listnum": "47",
-    "category": "Dresses",
-    "buyers": "50"
-  },
-  { "listnum": "48",
-    "category": "Jumpsuits",
-    "buyers": "51"
-  },
-  { "listnum": "49",
-    "category": "Coats",
-    "buyers": "52"
-  },
-  { "listnum": "50",
-    "category": "Blazers",
-    "buyers": "53"
-  },
-  { "listnum": "51",
-    "category": "Ties",
-    "buyers": "54"
-  },
-  { "listnum": "52",
-    "category": "Pocket Squares",
-    "buyers": "55"
-  },
-  { "listnum": "53",
-    "category": "Cufflinks",
-    "buyers": "56"
-  },
-  { "listnum": "54",
-    "category": "Watch",
-    "buyers": "57"
-  },
-  { "listnum": "55",
-    "category": "Sunglasses",
-    "buyers": "58"
-  },
-  { "listnum": "56",
-    "category": "Hats",
-    "buyers": "59"
-  },
-  { "listnum": "57",
-    "category": "Bags",
-    "buyers": "60"
-  },
-  { "listnum": "58",
-    "category": "Wallets",
-    "buyers": "61"
-  },
-  { "listnum": "59",
-    "category": "Belts",
-    "buyers": "62"
-  },
-  { "listnum": "60",
-    "category": "Scarves",
-    "buyers": "63"
-  },
-  { "listnum": "61",
-    "category": "Socks",
-    "buyers": "64"
-  },
-  { "listnum": "62",
-    "category": "Gloves",
-    "buyers": "65"
-  },
-  { "listnum": "63",
-    "category": "Sweaters",
-    "buyers": "66"
-  },
-  { "listnum": "64",
-    "category": "Swimwear",
-    "buyers": "67"
-  },
-  { "listnum": "65",
-    "category": "Accessories",
-    "buyers": "68"
-  },
-  { "listnum": "66",
-    "category": "Jewelry",
-    "buyers": "69"
-  },
-  { "listnum": "67",
-    "category": "Hoodies",
-    "buyers": "70"
-  },
-  { "listnum": "68",
-    "category": "Sweatshirts",
-    "buyers": "71"
-  },
-  { "listnum": "69",
-    "category": "Sweatpants",
-    "buyers": "72"
-  },
-  { "listnum": "70",
-    "category": "Suits",
-    "buyers": "73"
-  },
-  { "listnum": "71",
-    "category": "Skirts",
-    "buyers": "74"
-  },
-  { "listnum": "72",
-    "category": "Dresses",
-    "buyers": "75"
-  },
-  { "listnum": "73",
-    "category": "Jumpsuits",
-    "buyers": "76"
-  },
-  { "listnum": "74",
-    "category": "Coats",
-    "buyers": "77"
-  },
-  { "listnum": "75",
-    "category": "Blazers",
-    "buyers": "8"
-  },
-  { "listnum": "76",
-    "category": "Ties",
-    "buyers": "32"
-  },
-  { "listnum": "77",
-    "category": "Pocket Squares",
-    "buyers": "33"
-  }
+    {
+        "category": "Shoes",
+        "gender": "women",
+        "popularity": "1"
+    },
+    {
+        "category": "Shoes",
+        "gender": "men",
+        "popularity": "2"
+    },
+    {
+        "category": "Hoodies",
+        "gender": "women",
+        "popularity": "3"
+    },
+    {
+        "category": "Hoodies",
+        "gender": "men",
+        "popularity": "4"
+    },
+    {
+        "category": "T-Shirts",
+        "gender": "women",
+        "popularity": "5"
+    },
+    {
+        "category": "T-Shirts",
+        "gender": "men",
+        "popularity": "6"
+    },
+    {
+        "category": "Jackets",
+        "gender": "women",
+        "popularity": "7"
+    },
+    {
+        "category": "Jackets",
+        "gender": "men",
+        "popularity": "8"
+    },
+    {
+        "category": "Hats",
+        "gender": "women",
+        "popularity": "9"
+    },
+    {
+        "category": "Hats",
+        "gender": "men",
+        "popularity": "10"
+    }
 ]
- 
-
