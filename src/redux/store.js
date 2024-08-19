@@ -1,5 +1,6 @@
 import { combineReducers, legacy_createStore as createStore, applyMiddleware } from 'redux';
 import { persistStore, persistReducer } from 'redux-persist';
+import { thunk } from 'redux-thunk';
 import storage from 'redux-persist/lib/storage'; // or other storage like 'async-storage' for React Native
 import clientReducer from './clientReducer';
 import productReducer from './productReducer';
@@ -20,7 +21,7 @@ const rootReducer = combineReducers({
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-const store = createStore(persistedReducer, {}, applyMiddleware());
+const store = createStore(persistedReducer, {}, applyMiddleware(thunk));
 const persistor = persistStore(store);
 
 //when we close the website the persistence must be removed
