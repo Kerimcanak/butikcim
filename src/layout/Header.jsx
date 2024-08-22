@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { setUser } from "../redux/clientReducer";
 import { useMemo } from "react";
+import { Categories } from "../components/Categories";
 import axios from "axios";
 
 const tokenMap = {
@@ -16,7 +17,7 @@ const Header = () => {
   const dispatch = useDispatch(); // Accessing dispatch function
   var gravatar = require('gravatar');
 
-  const storedToken = useMemo(() => localStorage.getItem('token'), []); // Memoize the token value
+  const storedToken = useMemo(() => localStorage.getItem('token'), []); // Memorize the token value
   const userConfig = useMemo(() => {
     if (!storedToken) return null;
     return {
@@ -105,6 +106,7 @@ const Header = () => {
         <Link to="/signup" className="text-black hover:text-gray-600 mb-2 md:mb-0">
           Sign Up
         </Link>
+        <Categories />
       </nav>
     </header>
   );

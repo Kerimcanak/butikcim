@@ -8,7 +8,6 @@ import Team from './pages/Team';
 import Signup from './pages/Signup';
 import Signin from './pages/SignIn';
 import { verifyEndpoint } from './pages/verifyEndpoint';
-import { Categories } from './pages/Categories';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import 'react-toastify/dist/ReactToastify.css'
@@ -25,8 +24,7 @@ function App() {
       <Route exact path="/signup" component={Signup} />
       <Route exact path="/signin" component={Signin} />
       <Route exact path="/verify" component={verifyEndpoint} />
-      <Route exact path="/categories" component={Categories} />
-    </Router>
+   </Router>
   );
 }
 
