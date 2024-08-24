@@ -16,14 +16,14 @@ function App() {
   return (
     <Router>
       <Route exact path="/" component={HomePage} />
-      <Route exact path="/shop" component={Shop} />
-      <Route exact path="/product-detail" component={ProductDetails} />
-      <Route exact path="/contact" component={Contact} />
-      <Route exact path="/aboutus" component={Aboutus} />
-      <Route exact path="/team" component={Team} />
-      <Route exact path="/signup" component={Signup} />
-      <Route exact path="/signin" component={Signin} />
-      <Route exact path="/verify" component={verifyEndpoint} />
+      <Route path="/shop" component={Shop} />
+      <Route path="/product-detail" component={ProductDetails} />
+      <Route path="/contact" component={Contact} />
+      <Route path="/aboutus" component={Aboutus} />
+      <Route path="/team" component={Team} />
+      <Route path="/signup" component={Signup} />
+      <Route path="/signin" component={Signin} />
+      <Route path="/verify" component={verifyEndpoint} />
    </Router>
   );
 }
