@@ -3,9 +3,6 @@ import { ProductCard } from "../components/ProductCard";
 import { Link } from "react-router-dom";
 import LogoList from "../components/LogoList";
 
-const productWords = Array.from({ length: 9 }, () => Math.random().toString(36).substring(7));
-const productPics = Array.from({ length: 9 }, () => 'https://picsum.photos/400/300?random=' + Math.floor(Math.random() * 1000));
-const productPrices = Array.from({ length: 9 }, () => Math.floor(Math.random() * 1000));
 
 const PageContent = () => (
     <div className="container mx-auto py-8">
@@ -22,9 +19,6 @@ const PageContent = () => (
       <p className="text-base">Problems trying to resolve the conflict between</p>
     </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                {productPrices.map((price, index) => (
-        <ProductCard key={index} imgSrc={productPics[index]} title={productWords[index]} description={productWords[index]} price={price} />
-        ))}
         </div>
     </div>
 );

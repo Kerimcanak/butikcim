@@ -1,9 +1,6 @@
 import { ProductCard } from "../components/ProductCard";
 
 function ShopContent() {
-const productWords = Array.from({ length: 9 }, () => Math.random().toString(36).substring(7));
-const productPics = Array.from({ length: 9 }, () => 'https://picsum.photos/400/300?random=' + Math.floor(Math.random() * 1000));
-const productPrices = Array.from({ length: 9 }, () => Math.floor(Math.random() * 1000));
 
     return (
       <div className="mx-6 md:mx-12 lg:mx-20">
@@ -33,9 +30,6 @@ const productPrices = Array.from({ length: 9 }, () => Math.floor(Math.random() *
         </div>
         <div className="bg-zinc-50">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                {productPrices.map((price, index) => (
-        <ProductCard key={index} imgSrc={productPics[index]} title={productWords[index]} description={productWords[index]} price={price} />
-        ))}
         </div>
         </div>
         </div>

@@ -13,4 +13,10 @@ export default defineConfig({
       plugins: [tailwindcss()],
      },
     },
+    resolve: {
+      alias: {
+        "@/": "../../",
+      },
+    },
   });
+
