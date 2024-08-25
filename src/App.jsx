@@ -7,7 +7,6 @@ import Aboutus from './pages/Aboutus';
 import Team from './pages/Team';
 import Signup from './pages/Signup';
 import Signin from './pages/SignIn';
-import { ProductCard } from './components/ProductCard';
 import { verifyEndpoint } from './pages/verifyEndpoint';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -25,7 +24,6 @@ function App() {
       <Route path="/signup" component={Signup} />
       <Route path="/signin" component={Signin} />
       <Route path="/verify" component={verifyEndpoint} />
-      <Route path="/product-card" component={ProductCard} />
    </Router>
   );
 }

@@ -18,7 +18,19 @@ const PageContent = () => (
       <h3 className="text-xl font-semibold">BESTSELLER PRODUCTS</h3>
       <p className="text-base">Problems trying to resolve the conflict between</p>
     </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="flex flex-wrap justify-center items-center gap-6 p-4">
+          <div className="flex flex-col md:flex-row gap-6">
+            <ProductCard image="/mainPageProdCard1.jpeg" />
+            <ProductCard image="/mainPageProdCard2.jpeg" />
+            <ProductCard image="/mainPageProdCard3.jpeg" />
+            <ProductCard image="/mainPageProdCard4.jpeg" />
+          </div>
+          <div className="flex flex-col md:flex-row gap-6">
+            <ProductCard image="/mainPageProdCard5.jpeg" />
+            <ProductCard image="/mainPageProdCard6.jpeg" />
+            <ProductCard image="/mainPageProdCard7.jpeg" />
+            <ProductCard image="/mainPageProdCard8.jpeg" />
+          </div>
         </div>
     </div>
 );
