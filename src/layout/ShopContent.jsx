@@ -28,6 +28,26 @@ function ShopContent() {
           </div>
           <button className="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600 sm:mb-2">Filter</button>
         </div>
+        <div className="flex flex-wrap justify-center items-center gap-6 p-4">
+          <div className="flex flex-col md:flex-row gap-6">
+            <ProductCard image="/storeProdCard1.jpeg" />
+            <ProductCard image="/storeProdCard2.jpeg" />
+            <ProductCard image="/storeProdCard3.jpeg" />
+            <ProductCard image="/storeProdCard4.jpeg" />
+          </div>
+          <div className="flex flex-col md:flex-row gap-6">
+            <ProductCard image="/storeProdCard5.jpeg" />
+            <ProductCard image="/storeProdCard6.jpeg" />
+            <ProductCard image="/storeProdCard7.jpeg" />
+            <ProductCard image="/storeProdCard8.jpeg" />
+          </div>
+          <div className="flex flex-col md:flex-row gap-6">
+            <ProductCard image="/storeProdCard9.jpeg" />
+            <ProductCard image="/storeProdCard10.jpeg" />
+            <ProductCard image="/storeProdCard11.jpeg" />
+            <ProductCard image="/storeProdCard12.jpeg" />
+          </div>
+        </div>
         <div className="bg-zinc-50">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         </div>
